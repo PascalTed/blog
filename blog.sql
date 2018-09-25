@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 25 sep. 2018 à 10:04
+-- Généré le :  mar. 25 sep. 2018 à 14:41
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -31,26 +31,11 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE IF NOT EXISTS `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` varchar(255) NOT NULL,
-  `post_id` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `post_id` int(11) NOT NULL,
   `comment` text NOT NULL,
+  `moderation` tinyint(1) NOT NULL,
   `comment_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `moderation`
---
-
-DROP TABLE IF EXISTS `moderation`;
-CREATE TABLE IF NOT EXISTS `moderation` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `comment` varchar(255) NOT NULL,
-  `user_id` varchar(255) NOT NULL,
-  `comment_id` varchar(255) NOT NULL,
-  `moderation_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
