@@ -21,7 +21,10 @@
                     <p>
                         <label for="verifPassword">Vérification du mot de passe : </label><br />
                         <input type="verifPassword" id="verifPassword" name="verifPassword" />
-                    </p>                
+                    </p>
+                    <p>
+                        <input type="submit" value="S'inscrire" />
+                    </p>
                 </form>
             </div>
         </section>
