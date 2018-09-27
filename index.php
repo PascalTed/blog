@@ -2,11 +2,13 @@
 require('controller/frontend.php');
 
 try {
-    if ($_GET['action'] == 'post') {
-        if (isset($_GET['id']) && $_GET['id'] > 0) {
-            post();
-        } else {
-            throw new Exception('Aucun identifiant de billet envoyé'); 
+    if (isset($_GET['action'])) {
+        if ($_GET['action'] == 'post') {
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                post();
+            } else {
+                throw new Exception('Aucun identifiant de billet envoyé'); 
+            }
         }
     } else {
         listPosts();
