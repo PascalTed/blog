@@ -11,11 +11,11 @@
     <body>
         <header>
             <div>
-                <?php $titleHeader ?>
-                <?php $navigation ?>
+                <?= $titleHeader ?>
+                <?= $navigation ?>
             </div>
         </header>
-        <? $content ?>
+        <?= $content ?>
         
     </body>
     
