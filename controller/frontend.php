@@ -2,6 +2,7 @@
 
 // Chargement des classes
 require('model/PostManager.php');
+require('model/CommentManager.php');
 
 function listPosts()
 {
