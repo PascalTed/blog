@@ -4,7 +4,7 @@ require('controller/frontend.php');
 try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'post') {
-            if (isset($_GET['id']) && $_GET['id'] > 0) {
+            if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
                 post();
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé'); 
