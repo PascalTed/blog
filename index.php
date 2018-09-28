@@ -9,6 +9,12 @@ try {
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé'); 
             }
+        } elseif ($_GET['action'] == 'reportComment') {
+            if (isset($_GET['idComment']) && $_GET['idComment'] > 0) {
+                reportComment();
+            } else {
+                throw new Exception('Aucun identifiant de commentaire envoyé'); 
+            } 
         }
     } else {
         listPosts();
