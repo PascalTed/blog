@@ -22,3 +22,11 @@ function post()
 
     require('view/postView.php');
 }
+
+function reportComment()
+{
+    $commentManager = new CommentManager();
+    $commentManager->editReport($_GET['idComment']);
+    
+    header('Location: index.php?action=post&id=' . $_GET['idPost']);
+}
