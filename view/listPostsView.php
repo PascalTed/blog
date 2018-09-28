@@ -16,7 +16,7 @@ while ($data = $posts->fetch())
         
         <p>
             <?= nl2br(htmlspecialchars(substr($data['content'], 0, 100))); ?>
-            <em><a href="index.php?action=post&amp;id=<?= $data['id']; ?>"> ... lire la suite</a></em>
+            <em><a href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> ... lire la suite</a></em>
         </p>
     </div>
 <?php
