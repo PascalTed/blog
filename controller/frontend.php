@@ -17,8 +17,8 @@ function post()
     $postManager = new PostManager();
     $commentManager = new CommentManager();
 
-    $post = $postManager->getPost($_GET['id']);
-    $comments = $commentManager->getComments($_GET['id']);
+    $post = $postManager->getPost($_GET['idPost']);
+    $comments = $commentManager->getComments($_GET['idPost']);
 
     require('view/postView.php');
 }
@@ -28,5 +28,5 @@ function reportComment()
     $commentManager = new CommentManager();
     $commentManager->editReport($_GET['idComment']);
     
-    header('Location: index.php?action=post&id=' . $_GET['idPost']);
+    header('Location: index.php?action=post&idPost=' . $_GET['idPost']);
 }
