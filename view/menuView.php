@@ -1,7 +1,6 @@
 <?php ob_start(); ?>
 
 <ul>
-    
     <?php
     if (isset($_SESSION['pseudo'])) {
     ?>
@@ -20,7 +19,8 @@
     <?php
     }
     ?>
-    <li><a href="">Créer un compte</a></li>
+    
+    <li><a href="index.php?action=displayCreateAccount">Créer un compte</a></li>
 </ul>
 
 <?php $menu = ob_get_clean(); ?>
