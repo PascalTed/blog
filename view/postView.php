@@ -1,3 +1,5 @@
+<?php require('menuView.php'); ?>
+
 <?php ob_start(); ?>
 
 <section>
