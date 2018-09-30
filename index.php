@@ -15,6 +15,8 @@ try {
             } else {
                 throw new Exception('Aucun identifiant de commentaire envoyé'); 
             } 
+        } elseif ($_GET['action'] == 'displayCreateAccount') {
+            displayCreateAccount();
         }
     } else {
         listPosts();
