@@ -1,3 +1,5 @@
+<?php require('menuView.php'); ?>
+
 <?php ob_start(); ?>
 
 <h2>Billets du blog :</h2>
