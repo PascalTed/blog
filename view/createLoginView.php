@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<?php require('menuView.php'); ?>
 
-<html lang="fr">
-    <body>
+<?php ob_start(); ?>
+
         <section id="formulaireInscription">
             <div>
                 <h1>Inscription</h1>
@@ -27,7 +27,9 @@
                     </p>
                 </form>
             </div>
+            <p><a href="index.php">Retour Acceuil</a></p>
         </section>
-    </body>
-</html>
 
+<?php $content = ob_get_clean(); ?>
+
+<?php require('template.php'); ?>
