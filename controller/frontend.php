@@ -30,3 +30,8 @@ function reportComment()
     
     header('Location: index.php?action=post&idPost=' . $_GET['idPost']);
 }
+
+function displayCreateAccount()
+{
+    require('view/createLoginView.php');
+}
