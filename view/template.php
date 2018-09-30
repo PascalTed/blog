@@ -12,7 +12,7 @@
         <header>
             <div>
                 <?= $titleHeader ?>
-                <?= $navigation ?>
+                <?= $menu ?>
             </div>
         </header>
         <?= $content ?>
