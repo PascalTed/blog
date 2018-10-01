@@ -5,14 +5,14 @@
     if (isset($_SESSION['pseudo'])) {
     ?>
         
-    <li><a href="">Se déconnecter</a></li>
+    <li id="se-deconnecter">Se déconnecter</li>
     <li><a href="">Créer un compte</a></li>
     
     <?php
     } else {
     ?>
     
-    <li><a href="">Se connecter</a></li>
+    <li id="se-connecter">Se connecter</li>
     
     <?php
     }
