@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 25 sep. 2018 à 14:41
+-- Généré le :  lun. 01 oct. 2018 à 14:39
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `user_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `comment` text NOT NULL,
-  `moderation` tinyint(1) NOT NULL,
+  `moderation` tinyint(1) NOT NULL DEFAULT '0',
   `comment_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -63,6 +63,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `admin` tinyint(1) NOT NULL DEFAULT '0',
   `pseudo` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
