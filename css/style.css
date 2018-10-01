@@ -11,3 +11,8 @@
     height: 250px;
     width: 250px;
 }
+
+#se-connecter, se-deconnecter
+{
+        cursor: pointer;
+}
