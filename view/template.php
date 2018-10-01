@@ -32,6 +32,8 @@
         </header>
         <?= $content ?>
         
+        <!-- script -->
+        <script src="js/appli.js"></script>
     </body>
     
 </html>
