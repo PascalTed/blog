@@ -19,7 +19,7 @@ try {
             displayCreateAccount();
         } elseif ($_GET['action'] == 'createAccount') {
             if (verifPseudo($_POST['pseudo']) == false) {
-                if (verifPseudo($_POST['email']) == false) {
+                if (verifEmail($_POST['email']) == false) {
                     createAccount();
                 } else {
                     displayCreateAccount();
