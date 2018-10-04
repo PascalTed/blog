@@ -11,34 +11,34 @@ var formInscription = document.querySelector("#formulaireInscription > div > for
 var messagePass = document.getElementById("alertPassword");
 var messageVerifPass = document.getElementById("alertVerifPassword");
 
-formInscription.addEventListener("submit", function (e) {
-    
-    var mdpValue = formInscription.elements.password.value;
-    var verifMdpValue = formInscription.elements.verifPassword.value;
-    
-    var regexSpec = Object.create(Regex);
-    regexSpec.init(/\W+/, mdp);
-    var regexChiffre = Object.create(Regex);
-    regexChiffre.init(/\d+/, mdp);
+if (formInscription !== null) {
+    formInscription.addEventListener("submit", function (e) {
+        var mdpValue = formInscription.elements.password.value;
+        var verifMdpValue = formInscription.elements.verifPassword.value;
+        
+        var regexSpec = Object.create(Regex);
+        regexSpec.init(/\W+/, mdpValue);
+        var regexChiffre = Object.create(Regex);
+        regexChiffre.init(/\d+/, mdpValue);
 
-    if (regexSpec.verifier() === true) { 
-        console.log("caractère spécial ok");
-        if (regexChiffre.verifier() === true) { 
-            console.log("chiffre ok");
-            if (mdpValue === verifMdpValue) {
-            console.log("mot de passe identique");
-            m.textContent = "le mot de passe n'est pas identique";
-            }else {
-                console.log("on peut envoyer");  
+        if (regexSpec.verifier() === true) { 
+            console.log("caractère spécial ok");
+            if (regexChiffre.verifier() === true) { 
+                console.log("chiffre ok");
+                if (mdpValue === verifMdpValue) {
+                    console.log("on peut envoyer");;
+                }else {
+                    messageVerifPass.textContent = "Les mots de passe ne sont pas identiques";
+                    e.preventDefault();
+                }
+            } else {
+                messagePass.textContent = "Il faut au minimum un chiffre";  
                 e.preventDefault();
             }
         } else {
-            messageVerifPass.textContent = "il n'y a pas de chiffre";  
+            messagePass.textContent = "Il faut au minimum un caractère spécial";
             e.preventDefault();
         }
-    } else {
-        messagePass.textContent = "il n'y a pas de caractère spécial";
-        e.preventDefault();
-    }
-});
+    });
+}
 // Fin vérification mot de passe avant envoi
