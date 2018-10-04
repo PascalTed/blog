@@ -17,6 +17,16 @@ try {
             } 
         } elseif ($_GET['action'] == 'displayCreateAccount') {
             displayCreateAccount();
+        } elseif ($_GET['action'] == 'createAccount') {
+            if (verifPseudo($_POST['pseudo']) == false) {
+                if (verifPseudo($_POST['email']) == false) {
+                    createAccount();
+                } else {
+                    displayCreateAccount();
+                }
+            } else {
+                displayCreateAccount();
+            }
         }
     } else {
         listPosts();
