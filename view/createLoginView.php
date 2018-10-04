@@ -5,7 +5,7 @@
         <section id="formulaireInscription">
             <div>
                 <h1>Inscription</h1>
-                <form action="" method="post">
+                <form action="index.php?action=createAccount" method="post">
                     <p>
                         <label for="pseudo">Pseudo : </label><br />
                         <input type="text" id="pseudo" name="pseudo" required /><span id="alertPseudo"></span>
