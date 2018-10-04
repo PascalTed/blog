@@ -8,19 +8,19 @@
                 <form action="" method="post">
                     <p>
                         <label for="pseudo">Pseudo : </label><br />
-                        <input type="text" id="pseudo" name="pseudo" /><span id="alertPseudo"></span>
+                        <input type="text" id="pseudo" name="pseudo" required /><span id="alertPseudo"></span>
                     </p>
                     <p>
                         <label for="email">Adresse Email : </label><br />
-                        <input type="email" id="email" name="email" /><span id="alertEmail"></span>
+                        <input type="email" id="email" name="email" required /><span id="alertEmail"></span>
                     </p>
                     <p>
                         <label for="password">Mot de passe : </label><br />
-                        <input type="password" id="password" name="password" /><span id="alertPassword"></span>
+                        <input type="password" id="password" name="password" required /><span id="alertPassword"></span>
                     </p>
                     <p>
                         <label for="verifPassword">Vérification du mot de passe : </label><br />
-                        <input type="verifPassword" id="verifPassword" name="verifPassword" /><span id="alertVerifPassword"></span>
+                        <input type="Password" id="verifPassword" name="verifPassword" minlength="8" required /><span id="alertVerifPassword"></span>
                     </p>
                     <p>
                         <input type="submit" value="S'inscrire" />
