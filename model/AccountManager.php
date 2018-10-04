@@ -20,5 +20,13 @@ class AccountManager extends Manager
         $account->execute(array($email)); 
         $existEmail = $account->fetch();
         return $existEmail;
-     }
+    }
+    
+    public function editAccount()
+    {
+        $passHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $db = $this->dbConnect();
+        $account = $db->prepare('INSERT INTO users (pseudo, pass, email) VALUES (?, ?, ?)');
+        $account->execute(array($_POST['pseudo'], $passHash, $_POST['email']));
+    }
 }
