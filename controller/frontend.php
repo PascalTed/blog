@@ -50,3 +50,10 @@ function verifEmail($email) {
     $emailSearchResult = $accountManager->searchEmail($email);
     return $emailSearchResult;
 }
+
+function createAccount()
+{    
+    $accountManager = new AccountManager();
+    $accountManager->editAccount();
+    header('Location: index.php');
+}
