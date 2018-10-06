@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require('menuView.php'); ?>
 <?php require('loginView.php'); ?>
 
