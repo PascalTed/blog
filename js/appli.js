@@ -57,10 +57,10 @@ formConnexion.addEventListener("submit", function(e) {
     var ajaxPost = Object.create(AjaxPost);
     console.log(ajaxPost);
     
-    ajaxPost.init("index.php?action=connectAccount", str, function(reponse) {
+    ajaxPost.init("index.php?action=connectAccount", dataSend, function(reponse) {
     
         console.log("test");
-        console.log(str);
+        console.log(dataSend);
         console.log(reponse);
 
         if (reponse === "noUser") {
