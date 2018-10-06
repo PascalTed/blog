@@ -57,3 +57,9 @@ function createAccount()
     $accountManager->editAccount();
     header('Location: index.php');
 }
+
+function verifPseudoPass($pseudo, $pass) 
+{
+    $accountManager = new AccountManager();
+    $accountManager->searchPseudoPass($pseudo, $pass);
+}
