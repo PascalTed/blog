@@ -13,7 +13,7 @@
         <p>
             <input type="submit" value="Se connecter" id="formConnexion"/>
         </p>
-        <p id="erreur">incorrect</p>
+        <p id="erreur"></p>
     </form>
 </div>
 
