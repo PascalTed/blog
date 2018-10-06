@@ -27,6 +27,8 @@ try {
             } else {
                 displayCreateAccount();
             }
+        } elseif ($_GET['action'] == 'connectAccount'){
+            verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
         }
     } else {
         listPosts();
