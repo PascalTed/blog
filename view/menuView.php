@@ -6,7 +6,6 @@
     ?>
         
     <li id="se-deconnecter">Se déconnecter</li>
-    <li><a href="">Créer un compte</a></li>
     
     <?php
     } else {
