@@ -1,24 +1,20 @@
-<!DOCTYPE html>
+<?php ob_start(); ?>               
 
-<html lang="fr">
-    <body>
-        <section id="connexion">
-            <div>
-                <h1>Connexion</h1>
-                <form action="" method="post">
-                    <p>
-                        <label for="pseudo">Pseudo : </label><br />
-                        <input type="text" id="pseudo" name="pseudo" />
-                    </p>
-                    <p>
-                        <label for="password">Mot de passe : </label><br />
-                        <input type="password" id="password" name="password" />
-                    </p>
-                    <p>
-                        <input type="submit" value="Se connecter" />
-                    </p>
-                </form>
-            </div>
-        </section>
-    </body>
-</html>
+<div id="seConnecter">
+    <form action="index.php?action=connectAccount" method="post">
+        <p>
+            <label for="pseudoConnect">Pseudo : </label><br />
+            <input type="text" id="pseudoConnect" name="pseudoConnect" />
+        </p>
+        <p>
+            <label for="passwordConnect">Mot de passe : </label><br />
+            <input type="password" id="passwordConnect" name="passwordConnect" />
+        </p>
+        <p>
+            <input type="submit" value="Se connecter" id="formConnexion"/>
+        </p>
+        <p id="erreur">incorrect</p>
+    </form>
+</div>
+
+<?php $connexion = ob_get_clean(); ?>
