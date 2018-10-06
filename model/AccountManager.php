@@ -29,4 +29,25 @@ class AccountManager extends Manager
         $account = $db->prepare('INSERT INTO users (pseudo, pass, email) VALUES (?, ?, ?)');
         $account->execute(array($_POST['pseudo'], $passHash, $_POST['email']));
     }
+    
+    public function searchPseudoPass($pseudo, $pass) 
+    {
+        $db = $this->dbConnect();
+        $account = $db->prepare('SELECT admin, pass FROM users WHERE pseudo = ?');
+        $account->execute(array($pseudo));
+        $existingUsers = $account->fetch();
+            
+        $passHashVerif = password_verify($pass, $existingUsers['pass']);
+            
+        if (!$existingUsers) {
+            echo "noUser";
+        } elseif ($passHashVerif) {
+            session_start();
+            $_SESSION['admin'] = $existingUsers['admin'];
+            $_SESSION['pseudo'] = $pseudo;           
+            echo 'valid';
+        } else {
+            echo "noPass";
+        } 
+    }
 }
