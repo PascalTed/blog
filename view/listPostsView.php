@@ -1,4 +1,5 @@
 <?php require('menuView.php'); ?>
+<?php require('loginView.php'); ?>
 
 <?php ob_start(); ?>
 
