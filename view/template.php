@@ -19,6 +19,7 @@
         <?= $content ?>
         
         <!-- script -->
+        <script src="js/ajaxpost.js"></script>
         <script src="js/regex.js"></script>
         <script src="js/appli.js"></script>
     </body>
