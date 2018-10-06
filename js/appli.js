@@ -1,10 +1,12 @@
 
 //Affichage de la fenêtre de connexion
 var connectWindow = document.getElementById("se-connecter");
-connectWindow.addEventListener("click", function() {
-    document.getElementById("seConnecter").style.display = "block";
-    document.body.style.backgroundColor = "grey";
-});
+if (connectWindow !== null) {
+    connectWindow.addEventListener("click", function() {
+        document.getElementById("seConnecter").style.display = "block";
+        document.body.style.backgroundColor = "grey";
+    });
+}
 
 // Début vérification mot de passe avant envoi
 var formInscription = document.querySelector("#formulaireInscription > div > form");
