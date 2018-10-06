@@ -1,7 +1,7 @@
 <?php ob_start(); ?>               
 
 <div id="seConnecter">
-    <form action="index.php?action=connectAccount" method="post">
+    <form action="index.php" method="post">
         <p>
             <label for="pseudoConnect">Pseudo : </label><br />
             <input type="text" id="pseudoConnect" name="pseudoConnect" />
