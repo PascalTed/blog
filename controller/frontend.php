@@ -63,3 +63,17 @@ function verifPseudoPass($pseudo, $pass)
     $accountManager = new AccountManager();
     $accountManager->searchPseudoPass($pseudo, $pass);
 }
+
+function addComment($pseudo, $postId, $comment)
+{
+    $commentManager = new CommentManager();
+
+    $affectedLines = $commentManager->postComment($pseudo, $postId, $comment);
+
+    if ($affectedLines === false) {
+        throw new Exception('Impossible d\'ajouter le commentaire !');
+    }
+    else {
+        header('Location: index.php?action=post&id=' . $postId);
+    }
+}
