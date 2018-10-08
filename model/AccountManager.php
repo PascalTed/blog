@@ -42,7 +42,7 @@ class AccountManager extends Manager
         if (!$existingUsers) {
             echo "noUser";
         } elseif ($passHashVerif) {
-            session_start();
+
             $_SESSION['id'] = $existingUsers['id'];
             $_SESSION['admin'] = $existingUsers['admin'];
             $_SESSION['pseudo'] = $pseudo;           
