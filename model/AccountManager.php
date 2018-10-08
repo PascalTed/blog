@@ -33,7 +33,7 @@ class AccountManager extends Manager
     public function searchPseudoPass($pseudo, $pass) 
     {
         $db = $this->dbConnect();
-        $account = $db->prepare('SELECT admin, pass FROM users WHERE pseudo = ?');
+        $account = $db->prepare('SELECT id, admin, pass FROM users WHERE pseudo = ?');
         $account->execute(array($pseudo));
         $existingUsers = $account->fetch();
             
@@ -43,6 +43,7 @@ class AccountManager extends Manager
             echo "noUser";
         } elseif ($passHashVerif) {
             session_start();
+            $_SESSION['id'] = $existingUsers['id'];
             $_SESSION['admin'] = $existingUsers['admin'];
             $_SESSION['pseudo'] = $pseudo;           
             echo 'valid';
