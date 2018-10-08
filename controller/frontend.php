@@ -64,11 +64,11 @@ function verifPseudoPass($pseudo, $pass)
     $accountManager->searchPseudoPass($pseudo, $pass);
 }
 
-function addComment($pseudo, $postId, $comment)
+function addComment($userId, $postId, $comment)
 {
     $commentManager = new CommentManager();
 
-    $affectedLines = $commentManager->postComment($pseudo, $postId, $comment);
+    $affectedLines = $commentManager->postComment($userId, $postId, $comment);
 
     if ($affectedLines === false) {
         throw new Exception('Impossible d\'ajouter le commentaire !');
