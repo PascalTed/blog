@@ -32,7 +32,7 @@ try {
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
                 if (!empty($_POST['add-comment'])) {
-                    addComment(, $_SESSION['id'], $_GET['idPost'], $_POST['add-comment']);
+                    addComment($_SESSION['id'], $_GET['idPost'], $_POST['add-comment']);
                 }
                 else {
                     throw new Exception('Le champs n\'est pas rempli !');
