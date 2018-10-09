@@ -37,18 +37,10 @@ function displayCreateAccount()
     require('view/createLoginView.php');
 }
 
-function verifPseudo($pseudo) {
+function verifPseudoMailPass($pseudo, $mail) {
 
     $accountManager = new AccountManager();
-    $pseudoSearchResult = $accountManager->searchPseudo($pseudo);
-    return $pseudoSearchResult;
-}
-
-function verifEmail($email) {
-
-    $accountManager = new AccountManager();
-    $emailSearchResult = $accountManager->searchEmail($email);
-    return $emailSearchResult;
+    $accountManager->searchPseudoMail($pseudo, $mail);
 }
 
 function createAccount()
