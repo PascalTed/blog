@@ -40,7 +40,7 @@ function displayCreateAccount()
 function verifPseudoMailPass($pseudo, $mail) {
 
     $accountManager = new AccountManager();
-    $accountManager->searchPseudoMail($pseudo, $mail);
+    $accountManager->searchPseudoMailPass($pseudo, $mail);
 }
 
 function createAccount()
