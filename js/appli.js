@@ -76,14 +76,14 @@ if (formInscription !== null) {
                             });
                         }    
                     } else {
-                        messagePass.textContent = "Il faut au minimum un caractère spécial";
+                        messagePass.textContent = "Il faut au minimum un chiffre";
                         document.getElementById("password").addEventListener("click", function () {
                             messagePass.textContent = "";
                             messageVerifPass.textContent = "";
                         });
                     }        
                 } else {
-                    messagePass.textContent = "Il faut au minimum un chiffre"; 
+                    messagePass.textContent = "Il faut au minimum un caractère spécial"; 
                     document.getElementById("password").addEventListener("click", function () {
                         messagePass.textContent = "";
                         messageVerifPass.textContent = "";
