@@ -8,42 +8,87 @@ if (connectWindow !== null) {
     });
 }
 
-// Début vérification mot de passe avant envoi
+// Début vérification infos création compte avant envoi
 var formInscription = document.querySelector("#formulaireInscription > div > form");
+
+var messagePseudo = document.getElementById("alertPseudo");
+var messageEmail = document.getElementById("alertEmail");
 var messagePass = document.getElementById("alertPassword");
 var messageVerifPass = document.getElementById("alertVerifPassword");
 
 if (formInscription !== null) {
+    
     formInscription.addEventListener("submit", function (e) {
-        var mdpValue = formInscription.elements.password.value;
-        var verifMdpValue = formInscription.elements.verifPassword.value;
-        
+            
+        e.preventDefault();
+            
+        var userCreate = document.getElementById("pseudo").value;
+        var emailCreate = document.getElementById("email").value;
+        var mdpValue = document.getElementById("password").value;
+        var verifMdpValue = document.getElementById("verifPassword").value;
+
         var regexSpec = Object.create(Regex);
         regexSpec.init(/\W+/, mdpValue);
+        
         var regexChiffre = Object.create(Regex);
         regexChiffre.init(/\d+/, mdpValue);
-
-        if (regexSpec.verifier() === true) { 
-            console.log("caractère spécial ok");
-            if (regexChiffre.verifier() === true) { 
-                console.log("chiffre ok");
-                if (mdpValue === verifMdpValue) {
-                    console.log("on peut envoyer");;
-                }else {
-                    messageVerifPass.textContent = "Les mots de passe ne sont pas identiques";
-                    e.preventDefault();
-                }
+        
+        var dataSend = 'pseudo='+ userCreate + '&emailCreate=' + encodeURIComponent(email);
+        var ajaxPostcreate = Object.create(AjaxPost);
+        
+        ajaxPostcreate.init("index.php?action=createAccount", dataSend, function(reponse) {
+  
+            console.log("test");
+            console.log(dataSend);
+            
+            if (reponse !== "existUser") {
+                console.log("user libre");                   
             } else {
-                messagePass.textContent = "Il faut au minimum un chiffre";  
-                e.preventDefault();
+                console.log("user existant");
+                messagePseudo.textContent = "Pseudo déjà existant";
+                document.getElementById("pseudo").addEventListener("click", function () {
+                    messagePseudo.textContent = "";
+                });
             }
-        } else {
-            messagePass.textContent = "Il faut au minimum un caractère spécial";
-            e.preventDefault();
-        }
+            if (reponse !== "existEmail") {
+                console.log("mail libre"); 
+            } else {
+                console.log("email existant");
+                document.getElementById("alertEmail").textContent = "email existe déjà";          
+            }
+            if (reponse === "valide") {
+                console.log("réussi");                
+                if (regexSpec.verifier() === true) { 
+                    console.log("caractère spécial ok");
+                    if (regexChiffre.verifier() === true) { 
+                        console.log("chiffre ok");
+                        if (mdpValue === verifMdpValue) { 
+                            console.log("mdp identique");
+                            //formInscription.submit();
+                        } else {
+                            messageVerifPass.textContent = "Les mots de passe ne sont pas identiques";
+                            document.getElementById("verifPassword").addEventListener("click", function () {
+                                messageVerifPass.textContent = "";
+                            });
+                        }    
+                    } else {
+                        messagePass.textContent = "Il faut au minimum un caractère spécial";
+                        document.getElementById("password").addEventListener("click", function () {
+                            messagePass.textContent = "";
+                        });
+                    }        
+                } else {
+                    messagePass.textContent = "Il faut au minimum un chiffre"; 
+                    document.getElementById("password").addEventListener("click", function () {
+                        messagePass.textContent = "";
+                    });
+                }
+            }
+        });
+        ajaxPostcreate.executer();    
     });
 }
-// Fin vérification mot de passe avant envoi
+// Fin vérification infos création compte avant envoi
 
 // Début vérification login connexion
 var formConnexion = document.querySelector("#seConnecter > form");
