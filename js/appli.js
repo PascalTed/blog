@@ -33,7 +33,7 @@ if (formInscription !== null) {
         var regexChiffre = Object.create(Regex);
         regexChiffre.init(/\d+/, mdpValue);
         
-        var dataSend = 'pseudo='+ userCreate + '&emailCreate=' + encodeURIComponent(email);
+        var dataSend = 'pseudo='+ userCreate + '&email=' + encodeURIComponent(emailCreate);
         var ajaxPostCreate = Object.create(AjaxPost);
         
         ajaxPostCreate.init("index.php?action=verifCreateAccount", dataSend, function(reponse) {
@@ -54,7 +54,10 @@ if (formInscription !== null) {
                 console.log("mail libre"); 
             } else {
                 console.log("email existant");
-                document.getElementById("alertEmail").textContent = "email existe déjà";          
+                messageEmail.textContent = "email existe déjà";
+                document.getElementById("email").addEventListener("click", function () {
+                    messageEmail.textContent = "";
+                });
             }
             if (reponse === "valide") {
                 console.log("réussi");                
@@ -69,18 +72,21 @@ if (formInscription !== null) {
                             messageVerifPass.textContent = "Les mots de passe ne sont pas identiques";
                             document.getElementById("verifPassword").addEventListener("click", function () {
                                 messageVerifPass.textContent = "";
+                                messagePass.textContent = "";
                             });
                         }    
                     } else {
                         messagePass.textContent = "Il faut au minimum un caractère spécial";
                         document.getElementById("password").addEventListener("click", function () {
                             messagePass.textContent = "";
+                            messageVerifPass.textContent = "";
                         });
                     }        
                 } else {
                     messagePass.textContent = "Il faut au minimum un chiffre"; 
                     document.getElementById("password").addEventListener("click", function () {
                         messagePass.textContent = "";
+                        messageVerifPass.textContent = "";
                     });
                 }
             }
