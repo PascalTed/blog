@@ -4,7 +4,29 @@ require_once("model/Manager.php");
 
 class AccountManager extends Manager
 {
+    public function searchPseudoMailPass($pseudo, $mail) 
+    {
+        $db = $this->dbConnect();
+        
+        $pseudoAccount = $db->prepare('SELECT id, admin, pseudo, email FROM users WHERE pseudo = ?');
+        $pseudoAccount->execute(array($pseudo));
+        $existingUser = $pseudoAccount->fetch();
+        
+        $mailAccount = $db->prepare('SELECT id, admin, pseudo, email FROM users WHERE email = ?');
+        $mailAccount->execute(array($mail));
+        $existingMail = $mailAccount->fetch();
 
+        if ($existingUser['pseudo']) {
+            echo "existUser";
+        } elseif ($existingMail['email']) {
+            echo "existEmail";
+        } else{
+            $_SESSION['id'] = $existingUser['id'];
+            $_SESSION['admin'] = $existingUser['admin'];
+            $_SESSION['pseudo'] = $pseudo;           
+            echo "valide";
+        } 
+    }
     
     public function editAccount()
     {
