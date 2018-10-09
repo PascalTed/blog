@@ -34,9 +34,9 @@ if (formInscription !== null) {
         regexChiffre.init(/\d+/, mdpValue);
         
         var dataSend = 'pseudo='+ userCreate + '&emailCreate=' + encodeURIComponent(email);
-        var ajaxPostcreate = Object.create(AjaxPost);
+        var ajaxPostCreate = Object.create(AjaxPost);
         
-        ajaxPostcreate.init("index.php?action=createAccount", dataSend, function(reponse) {
+        ajaxPostCreate.init("index.php?action=verifCreateAccount", dataSend, function(reponse) {
   
             console.log("test");
             console.log(dataSend);
@@ -85,7 +85,7 @@ if (formInscription !== null) {
                 }
             }
         });
-        ajaxPostcreate.executer();    
+        ajaxPostCreate.executer();    
     });
 }
 // Fin vérification infos création compte avant envoi
@@ -101,10 +101,10 @@ formConnexion.addEventListener("submit", function(e) {
     var Pass = document.getElementById('passwordConnect').value;
     var dataSend = 'pseudoConnect='+ User + '&passwordConnect=' + encodeURIComponent(Pass);
     
-    var ajaxPost = Object.create(AjaxPost);
+    var ajaxPostConnect = Object.create(AjaxPost);
     console.log(ajaxPost);
     
-    ajaxPost.init("index.php?action=connectAccount", dataSend, function(reponse) {
+    ajaxPostConnect.init("index.php?action=connectAccount", dataSend, function(reponse) {
     
         console.log("test");
         console.log(dataSend);
@@ -123,6 +123,6 @@ formConnexion.addEventListener("submit", function(e) {
             formConnexion.submit();
             }
     });
-    ajaxPost.executer();
+    ajaxPostConnect.executer();
 });
 // Fin vérification login connexion
