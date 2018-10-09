@@ -18,18 +18,16 @@ try {
             } 
         } elseif ($_GET['action'] == 'displayCreateAccount') {
             displayCreateAccount();
+            
+        } elseif ($_GET['action'] == 'verifCreateAccount') {
+            verifPseudoMailPass($_POST['pseudo'], $_POST['email']);    
+        
         } elseif ($_GET['action'] == 'createAccount') {
-            if (verifPseudo($_POST['pseudo']) == false) {
-                if (verifEmail($_POST['email']) == false) {
-                    createAccount();
-                } else {
-                    displayCreateAccount();
-                }
-            } else {
-                displayCreateAccount();
-            }
+            createAccount();
+            
         } elseif ($_GET['action'] == 'connectAccount'){
             verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
+            
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
                 if (!empty($_POST['add-comment'])) {
