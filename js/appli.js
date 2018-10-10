@@ -8,6 +8,14 @@ if (connectWindow !== null) {
     });
 }
 
+var connectWindowToComment = document.getElementById("connect-to-comment");
+if (connectWindowToComment !== null) {
+    connectWindowToComment.addEventListener("click", function() {
+        document.getElementById("seConnecter").style.display = "block";
+        document.body.style.backgroundColor = "grey";
+    });
+}
+
 // Début vérification infos création compte avant envoi
 var formInscription = document.querySelector("#formulaireInscription > div > form");
 
