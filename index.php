@@ -28,6 +28,9 @@ try {
         } elseif ($_GET['action'] == 'connectAccount'){
             verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
             
+        } elseif ($_GET['action'] == 'displayAdminView' && $_SESSION['admin'] == 1) {
+            displayAdminView();            
+            
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
                 if (!empty($_POST['add-comment'])) {
