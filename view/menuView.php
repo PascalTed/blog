@@ -20,4 +20,15 @@
     <li><a href="index.php?action=displayCreateAccount">Créer un compte</a></li>
 </ul>
 
+<ul>
+    <?php
+    if (isset($_SESSION['pseudo']) AND isset($_SESSION['admin']) AND $_SESSION['admin'] == 1) {
+    ?>
+    <li><a href="index.php?action=displayAdminView">Mode admin</a></li>
+    <li><a href="index.php?">Mode client</a></li>
+    <?php
+    }
+    ?>
+</ul>
+
 <?php $menu = ob_get_clean(); ?>
