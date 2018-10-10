@@ -58,7 +58,7 @@ function verifPseudoPass($pseudo, $pass)
 
 function displayAdminView()
 {
-    require('view/tadminView.php');
+    require('view/adminView.php');
 }
 
 function addComment($userId, $postId, $comment)
