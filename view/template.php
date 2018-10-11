@@ -19,7 +19,7 @@
         <?= $content ?>
         
         <!-- script -->
-        <script src="tinymce/tinymce.js"></script>
+        <script src="js/tinymce/tinymce.js"></script>
         <script>
         tinymce.init({
             selector: '#textarea-titre, #textarea-contenu', menubar: false, toolbar: 'undo redo | bold, italic | alignleft, aligncenter, alignright, alignjustify', forced_root_block: false, branding: false, statusbar: false
