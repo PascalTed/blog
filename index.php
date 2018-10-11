@@ -29,7 +29,10 @@ try {
             verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
             
         } elseif ($_GET['action'] == 'displayAdminView' && $_SESSION['admin'] == 1) {
-            displayAdminView();            
+            displayAdminView();
+            
+        } elseif ($_GET['action'] == 'createPost') {
+            createPost($_POST['textarea-titre'], $_POST['textarea-contenu']);            
             
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
