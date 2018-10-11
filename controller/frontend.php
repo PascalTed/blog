@@ -50,6 +50,13 @@ function createAccount()
     header('Location: index.php');
 }
 
+function createPost($postTitle, $postContents)
+{
+    $createPostManager = new CreatePostManager();
+    $createPostManager->editPost($postTitle, $postContents);
+    header('Location: index.php'); 
+}
+
 function verifPseudoPass($pseudo, $pass) 
 {
     $accountManager = new AccountManager();
