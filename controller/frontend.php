@@ -4,6 +4,7 @@
 require('model/PostManager.php');
 require('model/CommentManager.php');
 require('model/AccountManager.php');
+require('model/CreatePostManager.php');
 
 function listPosts()
 {
