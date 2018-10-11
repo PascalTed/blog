@@ -116,7 +116,6 @@ formConnexion.addEventListener("submit", function(e) {
     var dataSend = 'pseudoConnect='+ User + '&passwordConnect=' + encodeURIComponent(Pass);
     
     var ajaxPostConnect = Object.create(AjaxPost);
-    console.log(ajaxPost);
     
     ajaxPostConnect.init("index.php?action=connectAccount", dataSend, function(reponse) {
     
