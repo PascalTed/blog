@@ -77,6 +77,14 @@ function admEditPost($postTitle, $postContents)
     header('Location: index.php?action=admListPosts');  
 }
 
+function admModifPost()
+{
+    $postManager = new PostManager();
+
+    $post = $postManager->getPost($_GET['idPost']);
+    require('view/admModifPostView.php');
+}
+
 
 function addComment($userId, $postId, $comment)
 {
