@@ -51,12 +51,6 @@ function createAccount()
     header('Location: index.php');
 }
 
-function createPost($postTitle, $postContents)
-{
-    $createPostManager = new CreatePostManager();
-    $createPostManager->editPost($postTitle, $postContents);
-    header('Location: index.php'); 
-}
 
 function verifPseudoPass($pseudo, $pass) 
 {
@@ -70,6 +64,14 @@ function admListPosts()
     $posts = $postManager->getPosts();
     require('view/admListPostsView.php');
 }
+
+function admEditPost($postTitle, $postContents)
+{
+    $createPostManager = new CreatePostManager();
+    $createPostManager->editPost($postTitle, $postContents);
+    header('Location: index.php'); 
+}
+
 
 function addComment($userId, $postId, $comment)
 {
