@@ -28,8 +28,8 @@ try {
         } elseif ($_GET['action'] == 'connectAccount'){
             verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
             
-        } elseif ($_GET['action'] == 'displayAdminView' && $_SESSION['admin'] == 1) {
-            displayAdminView();
+        } elseif ($_GET['action'] == 'admListPosts' && $_SESSION['admin'] == 1) {
+            admListPosts();
             
         } elseif ($_GET['action'] == 'createPost') {
             createPost($_POST['textarea-titre'], $_POST['textarea-contenu']);            
