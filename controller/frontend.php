@@ -85,6 +85,13 @@ function admModifPost()
     require('view/admModifPostView.php');
 }
 
+function admReportComment()
+{
+    $commentManager = new CommentManager();
+    $comments = $commentManager->getReportComment();
+    require('view/admReporCommentView.php');
+}
+
 
 function addComment($userId, $postId, $comment)
 {
