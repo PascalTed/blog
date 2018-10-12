@@ -64,9 +64,11 @@ function verifPseudoPass($pseudo, $pass)
     $accountManager->searchPseudoPass($pseudo, $pass);
 }
 
-function displayAdminView()
+function admListPosts()
 {
-    require('view/adminView.php');
+    $postManager = new PostManager();
+    $posts = $postManager->getPosts();
+    require('view/admListPostsView.php');
 }
 
 function addComment($userId, $postId, $comment)
