@@ -32,7 +32,10 @@ try {
             admListPosts();
             
         } elseif ($_GET['action'] == 'admCreatePost' && $_SESSION['admin'] == 1) {
-            admCreatePost();            
+            admCreatePost();
+            
+        } elseif ($_GET['action'] == 'admEditPost') {
+            admEditPost($_POST['textarea-titre'], $_POST['textarea-contenu']);
             
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
