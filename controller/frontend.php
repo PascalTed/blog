@@ -89,7 +89,7 @@ function admReportComment()
 {
     $commentManager = new CommentManager();
     $comments = $commentManager->getReportComment();
-    require('view/admReporCommentView.php');
+    require('view/admReportCommentView.php');
 }
 
 
