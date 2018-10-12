@@ -1,6 +1,7 @@
 <?php ob_start(); ?>
 
 <ul>
+    <li><a href="index.php">Acceuil</a></li>
     <?php
     if (isset($_SESSION['pseudo'])) {
     ?>
@@ -24,7 +25,7 @@
     <?php
     if (isset($_SESSION['pseudo']) AND isset($_SESSION['admin']) AND $_SESSION['admin'] == 1) {
     ?>
-    <li><a href="index.php?action=displayAdminView">Mode admin</a></li>
+    <li><a href="index.php?action=admListPosts">Gérer les billets</a></li>
     <?php
     }
     ?>
