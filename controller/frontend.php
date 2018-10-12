@@ -72,8 +72,8 @@ function admCreatePost()
 
 function admEditPost($postTitle, $postContents)
 {
-    $createPostManager = new CreatePostManager();
-    $createPostManager->editPost($postTitle, $postContents);
+    $PostManager = new PostManager();
+    $PostManager->editPost($postTitle, $postContents);
     header('Location: index.php'); 
 }
 
