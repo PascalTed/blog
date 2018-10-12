@@ -27,5 +27,12 @@ class CommentManager extends Manager
         $affectedLines = $comments->execute(array($userId, $postId, $comment));
 
         return $affectedLines;
-    }    
+    } 
+    
+    public function getReportComment()
+    {
+        $db = $this->dbConnect();
+        $comments = $db->query('SELECT id, comment FROM comments WHERE moderation = 1');
+        return $comments;   
+    }
 }
