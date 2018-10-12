@@ -15,7 +15,26 @@
 
 
 <section>
-    
+<?php
+while($comment = $comments->fetch()) {
+?>    
+    <div>
+        <p>
+            Le commentaire suivant du billet "" a été signalé :
+        </p>
+        <p>
+            <?= htmlspecialchars($comment['comment']); ?>
+        </p>
+        <p>
+            <a href="">Accepter commentaire</a><a href="">Supprimer commentaire</a>    
+        </p>
+
+    </div>
+<?php
+}
+$comments->closeCursor();
+?>
+ 
 
     
 </section>
