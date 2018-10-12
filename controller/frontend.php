@@ -74,7 +74,7 @@ function admEditPost($postTitle, $postContents)
 {
     $PostManager = new PostManager();
     $PostManager->editPost($postTitle, $postContents);
-    header('Location: index.php'); 
+    header('Location: index.php?action=admListPosts');  
 }
 
 
