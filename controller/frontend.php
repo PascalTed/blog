@@ -4,7 +4,7 @@
 require('model/PostManager.php');
 require('model/CommentManager.php');
 require('model/AccountManager.php');
-require('model/CreatePostManager.php');
+
 
 function listPosts()
 {
@@ -63,6 +63,11 @@ function admListPosts()
     $postManager = new PostManager();
     $posts = $postManager->getPosts();
     require('view/admListPostsView.php');
+}
+
+function admCreatePost()
+{
+    require('view/admCreatePostView.php');
 }
 
 function admEditPost($postTitle, $postContents)
