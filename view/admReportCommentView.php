@@ -20,7 +20,7 @@ while($comment = $comments->fetch()) {
 ?>    
     <div>
         <p>
-            Le commentaire suivant du billet "" a été signalé :
+            Le commentaire ci-dessous du billet : "<?= $comment['title'] ?>" a été signalé :
         </p>
         <p>
             <?= htmlspecialchars($comment['comment']); ?>
