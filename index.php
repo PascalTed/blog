@@ -47,7 +47,7 @@ try {
             admValidComment($_GET['idComment']);
             
         } elseif ($_GET['action'] == 'admRemoveComment') {
-            admRemoveComment($_GET['idComment'])    
+            admRemoveComment($_GET['idComment']);    
             
         } elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
