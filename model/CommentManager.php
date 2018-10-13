@@ -35,4 +35,18 @@ class CommentManager extends Manager
         $comments = $db->query('SELECT comments.id, comments.comment, posts.title FROM comments INNER JOIN posts ON comments.post_id = posts.id AND moderation = 1');
         return $comments;   
     }
+    
+    public function validComment($commentId)
+    {
+        $db = $this->dbConnect();
+        $comments = $db->prepare('UPDATE comments SET moderation = false where id = ?');
+        $comments->execute(array($commentId));
+    }
+    
+    public function removeComment($commentId)
+    {
+        $db = $this->dbConnect();
+        $comments = $db->prepare('DELETE FROM comments where id = ?');
+        $comments->execute(array($commentId));
+    }
 }
