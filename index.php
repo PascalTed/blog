@@ -59,7 +59,7 @@ try {
             admValidComment($_GET['idComment']);
             
         } elseif ($_GET['action'] == 'admRemoveComment') {
-             condition ($_GET['idComment']);    
+             admRemoveComment($_GET['idComment']);    
             
         
         }
