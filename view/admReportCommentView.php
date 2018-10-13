@@ -26,7 +26,7 @@ while($comment = $comments->fetch()) {
             <?= htmlspecialchars($comment['comment']); ?>
         </p>
         <p>
-            <a href="">Accepter commentaire</a><a href="">Supprimer commentaire</a>    
+            <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider commentaire</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer commentaire</a>    
         </p>
 
     </div>
