@@ -10,6 +10,18 @@ try {
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé'); 
             }
+        } elseif ($_GET['action'] == 'addComment') {
+            if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
+                if (!empty($_POST['add-comment'])) {
+                    addComment($_SESSION['id'], $_GET['idPost'], $_POST['add-comment']);
+                }
+                else {
+                    throw new Exception('Le champs n\'est pas rempli !');
+                }
+            }
+            else {
+                throw new Exception('Aucun identifiant de billet envoyé');
+            }    
         } elseif ($_GET['action'] == 'reportComment') {
             if (isset($_GET['idComment']) && $_GET['idComment'] > 0) {
                 reportComment();
@@ -47,20 +59,9 @@ try {
             admValidComment($_GET['idComment']);
             
         } elseif ($_GET['action'] == 'admRemoveComment') {
-            admRemoveComment($_GET['idComment']);    
+             condition ($_GET['idComment']);    
             
-        } elseif ($_GET['action'] == 'addComment') {
-            if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
-                if (!empty($_POST['add-comment'])) {
-                    addComment($_SESSION['id'], $_GET['idPost'], $_POST['add-comment']);
-                }
-                else {
-                    throw new Exception('Le champs n\'est pas rempli !');
-                }
-            }
-            else {
-                throw new Exception('Aucun identifiant de billet envoyé');
-            }
+        
         }
     } else {
         listPosts();
