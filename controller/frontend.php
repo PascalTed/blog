@@ -92,6 +92,22 @@ function admReportComment()
     require('view/admReportCommentView.php');
 }
 
+function admValidComment($commentId)
+{
+    $commentManager = new CommentManager();
+    $commentManager->validComment($commentId);
+    $comments = $commentManager->getReportComment();
+    require('view/admReportCommentView.php');
+}
+
+function admRemoveComment($commentId)
+{
+    $commentManager = new CommentManager();
+    $commentManager->removeComment($commentId);
+    $comments = $commentManager->getReportComment();
+    require('view/admReportCommentView.php');
+}
+
 
 function addComment($userId, $postId, $comment)
 {
