@@ -75,7 +75,7 @@ if (formInscription !== null) {
                         console.log("chiffre ok");
                         if (mdpValue === verifMdpValue) { 
                             console.log("mdp identique");
-                            //formInscription.submit();
+                            formInscription.submit();
                         } else {
                             messageVerifPass.textContent = "Les mots de passe ne sont pas identiques";
                             document.getElementById("verifPassword").addEventListener("click", function () {
