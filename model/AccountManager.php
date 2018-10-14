@@ -28,12 +28,12 @@ class AccountManager extends Manager
         } 
     }
     
-    public function editAccount()
+    public function editAccount($pseudo, $mail, $pass)
     {
-        $passHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $passHash = password_hash($pass, PASSWORD_DEFAULT);
         $db = $this->dbConnect();
         $account = $db->prepare('INSERT INTO users (pseudo, pass, email) VALUES (?, ?, ?)');
-        $account->execute(array($_POST['pseudo'], $passHash, $_POST['email']));
+        $account->execute(array($pseudo, $passHash, $mail));
     }
     
     public function searchPseudoPass($pseudo, $pass) 
