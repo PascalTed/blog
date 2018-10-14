@@ -24,7 +24,7 @@ try {
             }    
         } elseif ($_GET['action'] == 'reportComment') {
             if (isset($_GET['idComment']) && $_GET['idComment'] > 0) {
-                reportComment();
+                reportComment($_GET['idComment']);
             } else {
                 throw new Exception('Aucun identifiant de commentaire envoyé'); 
             } 
