@@ -25,12 +25,12 @@ function post($postId)
     require('view/postView.php');
 }
 
-function reportComment()
+function reportComment($commentId, $postId)
 {
     $commentManager = new CommentManager();
-    $commentManager->editReport($_GET['idComment']);
+    $commentManager->editReport($commentId);
     
-    header('Location: index.php?action=post&idPost=' . $_GET['idPost']);
+    header('Location: index.php?action=post&idPost=' . $postId);
 }
 
 function displayCreateAccount()
