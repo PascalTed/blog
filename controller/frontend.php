@@ -14,13 +14,13 @@ function listPosts()
     require('view/listPostsView.php');
 }
 
-function post()
+function post($postId)
 {
     $postManager = new PostManager();
     $commentManager = new CommentManager();
 
-    $post = $postManager->getPost($_GET['idPost']);
-    $comments = $commentManager->getComments($_GET['idPost']);
+    $post = $postManager->getPost($postId);
+    $comments = $commentManager->getComments($postId);
 
     require('view/postView.php');
 }
