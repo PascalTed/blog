@@ -50,7 +50,7 @@ try {
             admEditPost($_POST['textarea-titre'], $_POST['textarea-contenu']);
             
         } elseif ($_GET['action'] == 'admModifPost' && $_SESSION['admin'] == 1) {
-            admModifPost();  
+            admModifPost($_GET['idPost']);  
                                 
         } elseif ($_GET['action'] == 'admReportComment') {
             admReportComment();
