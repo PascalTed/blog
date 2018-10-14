@@ -77,11 +77,11 @@ function admEditPost($postTitle, $postContents)
     header('Location: index.php?action=admListPosts');  
 }
 
-function admModifPost()
+function admModifPost($postId)
 {
     $postManager = new PostManager();
 
-    $post = $postManager->getPost($_GET['idPost']);
+    $post = $postManager->getPost($postId);
     require('view/admModifPostView.php');
 }
 
