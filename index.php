@@ -50,7 +50,15 @@ try {
             admEditPost($_POST['textarea-titre'], $_POST['textarea-contenu']);
             
         } elseif ($_GET['action'] == 'admModifPost' && $_SESSION['admin'] == 1) {
-            admModifPost($_GET['idPost']);  
+            admModifPost($_GET['idPost']);
+            
+        } elseif ($_GET['action'] == 'admModifyOrRemovePost' && $_SESSION['admin'] == 1) {
+            if ($_POST['setPost'] == modifyPost) {
+                admModifyPost($_GET['idPost'], $_POST['textarea-titre'], $_POST['textarea-contenu']);
+            }
+            if ($_POST['setPost'] == removePost) {
+                admRemovePost($_GET['idPost']);
+            }        
                                 
         } elseif ($_GET['action'] == 'admReportComment') {
             admReportComment();
