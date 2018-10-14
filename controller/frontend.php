@@ -44,10 +44,10 @@ function verifPseudoMailPass($pseudo, $mail) {
     $accountManager->searchPseudoMailPass($pseudo, $mail);
 }
 
-function createAccount()
+function createAccount($pseudo, $mail)
 {    
     $accountManager = new AccountManager();
-    $accountManager->editAccount();
+    $accountManager->editAccount($pseudo, $mail);
     header('Location: index.php');
 }
 
