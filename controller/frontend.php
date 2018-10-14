@@ -85,6 +85,24 @@ function admModifPost($postId)
     require('view/admModifPostView.php');
 }
 
+function admModifyPost($postId, $textareaTitre, $textareaContenu)
+{
+    
+    $postManager = new PostManager();
+    $postManager->modifyPost($postId, $textareaTitre, $textareaContenu);
+    $posts = $postManager->getPosts();
+    require('view/admListPostsView.php');
+}
+
+function admRemovePost($postId) 
+{
+    $postManager = new PostManager();
+    $postManager->removePost($postId);
+    $posts = $postManager->getPosts();
+    require('view/admListPostsView.php');    
+}
+
+
 function admReportComment()
 {
     $commentManager = new CommentManager();
