@@ -13,11 +13,11 @@ class CommentManager extends Manager
         return $comments;
     }
     
-    public function editReport()
+    public function editReport($commentId)
     {
         $db = $this->dbConnect();
         $comments = $db->prepare('UPDATE comments SET moderation = true where id = ?');
-        $comments->execute(array($_GET['idComment']));
+        $comments->execute(array($commentId));
     }
     
     public function postComment($userId, $postId, $comment)
