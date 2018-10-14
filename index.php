@@ -6,7 +6,7 @@ try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'post') {
             if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
-                post();
+                post($_GET['idPost']);
             } else {
                 throw new Exception('Aucun identifiant de billet envoyé'); 
             }
