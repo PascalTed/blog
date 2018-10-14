@@ -35,7 +35,7 @@ try {
             verifPseudoMailPass($_POST['pseudo'], $_POST['email']);    
         
         } elseif ($_GET['action'] == 'createAccount') {
-            createAccount();
+            createAccount($_POST['pseudo'], $_POST['email']);
             
         } elseif ($_GET['action'] == 'connectAccount'){
             verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
