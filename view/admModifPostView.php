@@ -7,7 +7,7 @@
 <?php ob_start(); ?>
 
 <div>
-    <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php">Commentaires signalés</a><a href="index.php?action=admListPosts">Billets créés</a></p>
+    <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
 </div>
 
 <h2>modifier ou supprimer le billet :</h2>
