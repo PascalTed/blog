@@ -86,7 +86,7 @@ function admEditPost($postTitle, $postContents)
     header('Location: index.php?action=admListPosts');  
 }
 
-function admModifPost($postId)
+function admSeeModifyPost($postId)
 {
     $postManager = new PostManager();
 
