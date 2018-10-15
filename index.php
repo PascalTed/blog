@@ -55,11 +55,11 @@ try {
         } elseif ($_GET['action'] == 'admModifPost' && $_SESSION['admin'] == 1) {
             admModifPost($_GET['idPost']);
             
-        } elseif ($_GET['action'] == 'admModifyOrRemovePost' && $_SESSION['admin'] == 1) {
-            if ($_POST['setPost'] == modifyPost) {
+        } elseif ($_GET['action'] == 'admModifyOrRemovePost' && isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+            if (isset($_POST['setPost']) && $_POST['setPost'] == "modifyPost") {
                 admModifyPost($_GET['idPost'], $_POST['textarea-titre'], $_POST['textarea-contenu']);
             }
-            if ($_POST['setPost'] == removePost) {
+            if (isset($_POST['setPost']) && $_POST['setPost'] == "removePost") {
                 admRemovePost($_GET['idPost']);
             }        
                                 
