@@ -19,7 +19,7 @@
             } else {
             ?>
             <p id="no-connected">Il faut être connecté pour ajouter ou signaler un commentaire</p>
-            <p id="connect-to-comment">se connecter</p>
+            <p><a href="#" id="connect-to-comment">se connecter</a></p>
             <?php
             }
             ?>
