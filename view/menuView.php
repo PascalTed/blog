@@ -6,13 +6,13 @@
     if (isset($_SESSION['pseudo'])) {
     ?>
         
-    <li id="se-deconnecter">Se déconnecter</li>
+    <li><a href="index.php?action=disconnectAccount" id="se-deconnecter">Se déconnecter</a></li>
     
     <?php
     } else {
     ?>
     
-    <li id="se-connecter">Se connecter</li>
+    <li><a href="#" id="se-connecter">Se connecter</a></li>
     
     <?php
     }
