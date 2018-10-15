@@ -58,6 +58,15 @@ function verifPseudoPass($pseudo, $pass)
     $accountManager->searchPseudoPass($pseudo, $pass);
 }
 
+function  disconnectAccount()
+{
+    
+    $accountManager = new AccountManager();
+    $accountManager->removeSession();
+    header('Location: index.php');
+    
+}
+
 function admListPosts()
 {
     $postManager = new PostManager();
