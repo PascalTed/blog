@@ -30,7 +30,7 @@ while ($data = $posts->fetch())
             <?= nl2br(htmlspecialchars(substr($data['content'], 0, 100))); ?>...
         </p>
         <p>
-            <a href="index.php?action=admModifPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
+            <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
         </p>
     </div>
 <?php
