@@ -52,8 +52,8 @@ try {
         } elseif ($_GET['action'] == 'admEditPost') {
             admEditPost($_POST['textarea-titre'], $_POST['textarea-contenu']);
             
-        } elseif ($_GET['action'] == 'admModifPost' && $_SESSION['admin'] == 1) {
-            admModifPost($_GET['idPost']);
+        } elseif ($_GET['action'] == 'admSeeModifyPost' && isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+            admSeeModifyPost($_GET['idPost']);
             
         } elseif ($_GET['action'] == 'admModifyOrRemovePost' && isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
             if (isset($_POST['setPost']) && $_POST['setPost'] == "modifyPost") {
