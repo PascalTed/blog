@@ -1,5 +1,5 @@
 
-//Affichage de la fenêtre de connexion
+// Début affichage de la fenêtre de connexion
 var connectWindow = document.getElementById("se-connecter");
 if (connectWindow !== null) {
     connectWindow.addEventListener("click", function() {
@@ -15,8 +15,9 @@ if (connectWindowToComment !== null) {
         document.body.style.backgroundColor = "grey";
     });
 }
+// Fin affichage de la fenêtre de connexion
 
-// Début vérification infos création compte avant envoi
+// Début vérification infos création compte. Si le pseudo et le mail n'existe pas, le compte est créé
 var formInscription = document.querySelector("#formulaireInscription > div > form");
 
 var messagePseudo = document.getElementById("alertPseudo");
@@ -102,9 +103,9 @@ if (formInscription !== null) {
         ajaxPostCreate.executer();    
     });
 }
-// Fin vérification infos création compte avant envoi
+// Fin vérification infos création compte. Si le pseudo et le mail n'existe pas, le compte est créé
 
-// Début vérification login connexion
+// Début vérification login connexion. Si le pseudo et le mot de passe associé sont exactes, on se connecte
 var formConnexion = document.querySelector("#seConnecter > form");
 
 formConnexion.addEventListener("submit", function(e) {
@@ -138,4 +139,4 @@ formConnexion.addEventListener("submit", function(e) {
     });
     ajaxPostConnect.executer();
 });
-// Fin vérification login connexion
+// Fin vérification login connexion. Si le pseudo et le mot de passe associé sont exactes, on se connecte
