@@ -40,6 +40,9 @@ try {
         } elseif ($_GET['action'] == 'connectAccount'){
             verifPseudoPass($_POST['pseudoConnect'], $_POST['passwordConnect']);
             
+        } elseif ($_GET['action'] == 'disconnectAccount'){
+            disconnectAccount();
+            
         } elseif ($_GET['action'] == 'admListPosts' && $_SESSION['admin'] == 1) {
             admListPosts();
             
