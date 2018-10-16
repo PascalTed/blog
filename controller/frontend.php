@@ -103,10 +103,14 @@ function admModifyPost($postId, $textareaTitre, $textareaContenu)
     require('view/admListPostsView.php');
 }
 
-function admRemovePost($postId) 
+function admRemovePostComments($postId) 
 {
     $postManager = new PostManager();
     $postManager->removePost($postId);
+        
+    $commentManager = new CommentManager();
+    $commentManager->removeCommentsByPost($postId);
+    
     $posts = $postManager->getPosts();
     require('view/admListPostsView.php');    
 }
