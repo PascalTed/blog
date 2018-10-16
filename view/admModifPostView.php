@@ -30,7 +30,7 @@
         
         <input type="radio" name="setPost" value="modifyPost" id="modifyPost" /> <label for="modifyPost">Modifier le billet</label>
         
-        <input type="radio" name="setPost" value="removePost" id="removePost" /> <label for="removePost">Supprimer le billet</label><br />
+        <input type="radio" name="setPost" value="admRemovePostComments" id="admRemovePostComments" /> <label for="admRemovePostComments">Supprimer le billet</label><br />
         
         <input type="submit" value="Envoyer" />
 
