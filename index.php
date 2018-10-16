@@ -59,8 +59,8 @@ try {
             if (isset($_POST['setPost']) && $_POST['setPost'] == "modifyPost") {
                 admModifyPost($_GET['idPost'], $_POST['textarea-titre'], $_POST['textarea-contenu']);
             }
-            if (isset($_POST['setPost']) && $_POST['setPost'] == "removePost") {
-                admRemovePost($_GET['idPost']);
+            if (isset($_POST['setPost']) && $_POST['setPost'] == "admRemovePostComments") {
+                admRemovePostComments($_GET['idPost']);
             }        
                                 
         } elseif ($_GET['action'] == 'admReportComment') {
