@@ -49,4 +49,11 @@ class CommentManager extends Manager
         $comments = $db->prepare('DELETE FROM comments where id = ?');
         $comments->execute(array($commentId));
     }
+    
+    public function removeCommentsByPost($postId)
+    {
+        $db = $this->dbConnect();
+        $comments = $db->prepare('DELETE FROM comments where post_id = ?');
+        $comments->execute(array($postId));
+    }  
 }
