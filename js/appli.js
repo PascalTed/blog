@@ -146,19 +146,21 @@ var formTextComment = document.getElementById("form-add-comment");
 var noComment = document.getElementById("no-comment");
 var textAreaComment = document.getElementById("add-comment");
 
-formTextComment.addEventListener("submit", function (e) {
+if (formTextComment !== null) {
+    formTextComment.addEventListener("submit", function (e) {
 
-    e.preventDefault();
-    
-    var valueTextComment = textAreaComment.value;
+        e.preventDefault();
 
-    if (valueTextComment === "") {
-        noComment.textContent = "Le champ commentaire n'est pas rempli";
-        textAreaComment.addEventListener("click", function () {
-            noComment.textContent = "";
-        });
-    } else {
-        formTextComment.submit();
-    }
-});
+        var valueTextComment = textAreaComment.value;
+
+        if (valueTextComment === "") {
+            noComment.textContent = "Le champ commentaire n'est pas rempli.";
+            textAreaComment.addEventListener("click", function () {
+                noComment.textContent = "";
+            });
+        } else {
+            formTextComment.submit();
+        }
+    });
+}
 // Fin vérification textarea "Laisser un commentaire"
