@@ -140,3 +140,25 @@ formConnexion.addEventListener("submit", function(e) {
     ajaxPostConnect.executer();
 });
 // Fin vérification login connexion. Si le pseudo et le mot de passe associé sont exactes, on se connecte
+
+// Début vérification textarea "Laisser un commentaire"
+var formTextComment = document.getElementById("form-add-comment");
+var noComment = document.getElementById("no-comment");
+var textComment = document.getElementById("add-comment");
+
+formTextComment.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+    
+    var textComment = document.getElementById("add-comment").value;
+
+    if (textComment === "") {
+        noComment.textContent = "Le champ commentaire n'est pas rempli";
+        textComment.addEventListener("click", function () {
+            noComment.textContent = "";
+        });
+    } else {
+        formTextComment.submit();
+    }
+});
+// Fin vérification textarea "Laisser un commentaire"
