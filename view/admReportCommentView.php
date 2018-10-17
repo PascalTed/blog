@@ -15,25 +15,33 @@
 
 
 <section>
-<?php
-while($comment = $comments->fetch()) {
-?>    
-    <div>
-        <p>
-            Le commentaire ci-dessous du billet : "<?= $comment['title'] ?>" a été signalé :
-        </p>
-        <p>
-            <?= htmlspecialchars($comment['comment']); ?>
-        </p>
-        <p>
-            <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider commentaire</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer commentaire</a>    
-        </p>
+    <?php
+    $countReportComment = $comments->rowcount();
+    while($comment = $comments->fetch()) {
+    ?>    
+        <div>
+            <p>
+                Titre du billet : <?= $comment['title'] ?>
+            </p>
+            <p>
+                Commentaire signalé : "<?= htmlspecialchars($comment['comment']); ?>"
+            </p>
+            <p>
+                <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider commentaire</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer commentaire</a>    
+            </p>
 
-    </div>
-<?php
-}
-$comments->closeCursor();
-?>
+        </div>
+    <?php
+    }
+    if ($countReportComment == 0) {
+    ?>
+        <div>
+            <p>Il n'y a pas de commentaires signalés</p>
+        </div>
+    <?php
+    }
+    $comments->closeCursor();
+    ?>
  
 
     
