@@ -144,17 +144,17 @@ formConnexion.addEventListener("submit", function(e) {
 // Début vérification textarea "Laisser un commentaire"
 var formTextComment = document.getElementById("form-add-comment");
 var noComment = document.getElementById("no-comment");
-var textComment = document.getElementById("add-comment");
+var textAreaComment = document.getElementById("add-comment");
 
 formTextComment.addEventListener("submit", function (e) {
 
     e.preventDefault();
     
-    var textComment = document.getElementById("add-comment").value;
+    var valueTextComment = textAreaComment.value;
 
-    if (textComment === "") {
+    if (valueTextComment === "") {
         noComment.textContent = "Le champ commentaire n'est pas rempli";
-        textComment.addEventListener("click", function () {
+        textAreaComment.addEventListener("click", function () {
             noComment.textContent = "";
         });
     } else {
