@@ -21,25 +21,36 @@
             <?= nl2br(htmlspecialchars($post['content'])) ?>
         </p>
     </div>
-<?= $addComment ?>
-<?php
-while ($comment = $comments->fetch())
-{
-?>
-    <div>
-        <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
-        <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
-        <?php
-        if (isset($_SESSION['pseudo'])) { 
+    
+    <?= $addComment ?>
+    
+    <?php
+    $countComment = $comments->rowcount();
+    if ($countComment == 0) {
+    ?>
+        <div>
+            <p>Il n'y a pas eu encore de commentaires.</p>
+        </div>
+    <?php
+    } else {
+        while ($comment = $comments->fetch())
+        {
         ?>
-        <p><a href="index.php?action=reportComment&amp;idComment=<?= $comment['id']; ?>&amp;idPost=<?= $post['id']; ?> ">Signaler</a></p>
+            <div>
+                <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+                <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+                <?php
+                if (isset($_SESSION['pseudo'])) { 
+                ?>
+                <p><a href="index.php?action=reportComment&amp;idComment=<?= $comment['id']; ?>&amp;idPost=<?= $post['id']; ?> ">Signaler</a></p>
+                <?php
+                }
+                ?>
+            </div>
         <?php
         }
+    }
         ?>
-    </div>
-<?php
-}
-?>
     
 </section>
 
