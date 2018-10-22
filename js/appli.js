@@ -164,3 +164,45 @@ if (formTextComment !== null) {
     });
 }
 // Fin vérification textarea "Laisser un commentaire"
+
+// Début vérification textarea "Ajouter le titre" et "Ajouter le contenu"
+var formCreatePost = document.getElementById("form-add-post");
+var noTitle = document.getElementById("no-title");
+var noContent = document.getElementById("no-content");
+var textAreaCreateTitle = document.getElementById("textarea-titre");
+var textAreaCreateContent = document.getElementById("textarea-contenu");
+
+if (formCreatePost !== null) {
+
+    formCreatePost.addEventListener("submit", function (e) {
+        tinymce.triggerSave();
+        e.preventDefault();
+        
+        var valueTitle = textAreaCreateTitle.value;
+        var valueContent = textAreaCreateContent.value;
+        console.log(tinymce.get("textarea-titre"));
+        
+        if (valueTitle === "") {
+            noTitle.textContent = "Il faut ajouter un titre pour ajouter le billet"
+            tinymce.get("textarea-titre").on("click", function () {
+                noTitle.textContent = "";
+            });
+
+        }
+                console.log(valueTitle);
+        if (valueContent === "") {
+            
+            noContent.textContent = "Il faut ajouter le contenu pour ajouter le billet"
+            tinymce.get("textarea-contenu").on("click", function () {
+                noContent.textContent = "";
+            });
+        }
+        console.log(valueContent);
+        if (valueTitle !== "" && valueContent !== "") {
+            //formCreatePost.submit();
+            console.log("envoyer");
+        }
+    });
+
+}
+// Fin vérification textarea "Ajouter le titre" et "Ajouter le contenu"
