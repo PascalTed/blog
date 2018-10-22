@@ -23,7 +23,7 @@
 
             <label for="textarea-contenu">Ajouter le contenu</label>
             <textarea id="textarea-contenu" name="textarea-contenu"></textarea>
-
+            <span id="no-content"></span><br />
             <input type="submit" value="Ajouter le billet" />
         </p>
      </form>
