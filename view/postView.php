@@ -3,6 +3,8 @@
 <?php require('loginView.php'); ?>
 <?php require('addCommentView.php'); ?>
 
+<?php $titleHeader = "Blog de Jean Forteroche" ?>
+
 <?php ob_start(); ?>
 
 <section>
