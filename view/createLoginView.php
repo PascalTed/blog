@@ -2,6 +2,8 @@
 <?php require('menuView.php'); ?>
 <?php require('loginView.php'); ?>
 
+<?php $titleHeader = "Blog de Jean Forteroche" ?>
+
 <?php ob_start(); ?>
 
         <section id="formulaireInscription">
