@@ -10,10 +10,15 @@
     
     <body>
         <header>
-            <div>
-                <?= $titleHeader ?>
-                <?= $menu ?>
-                <?= $connexion ?>
+            <div id="title-menu">
+                <div id="title-container">
+                    <p><?= $titleHeader ?></p>
+                </div>
+                
+                <div id="menu-container">
+                    <?= $menu ?>
+                    <?= $connexion ?>
+                </div>
             </div>
         </header>
         <?= $content ?>
