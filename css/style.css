@@ -1,3 +1,65 @@
+/* début body */
+body
+{
+	margin: auto;
+}
+
+/*  Début header  */
+#title-menu
+{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+}
+
+#title-container
+{
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 70%;
+    text-align: center;
+}
+
+#title-container p
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#menu
+{
+    display: flex;
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    height: 100%;
+}
+
+#menu li
+{
+    border-left: 1px dashed white;
+}
+
+#menu li a
+{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    width: 130px;
+    height: 50px;
+    font-size: 18px;
+}
+
+/* fenêtre de connexion */
 #seConnecter
 {
     display: none;
@@ -11,8 +73,17 @@
     height: 250px;
     width: 250px;
 }
+/* Fin header */
 
+/* Début $content */
 #no-comment
 {
     color: red;
+}
+/* Fin $content */
+/* Fin body */
+
+/* Responsive */
+@media all and (max-width: 1024px){
+    
 }
