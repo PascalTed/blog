@@ -19,9 +19,7 @@
     ?>
     
     <li><a href="index.php?action=displayCreateAccount">Créer un compte</a></li>
-</ul>
 
-<ul>
     <?php
     if (isset($_SESSION['pseudo']) AND isset($_SESSION['admin']) AND $_SESSION['admin'] == 1) {
     ?>
@@ -29,6 +27,8 @@
     <?php
     }
     ?>
+    
 </ul>
+
 
 <?php $menu = ob_get_clean(); ?>
