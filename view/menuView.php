@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 
-<ul>
+<ul id="menu">
     <li><a href="index.php">Acceuil</a></li>
     <?php
     if (isset($_SESSION['pseudo'])) {
