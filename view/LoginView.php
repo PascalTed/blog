@@ -2,6 +2,7 @@
 
 <div id="seConnecter">
     <form action="#" method="post">
+        <i class="fas fa-times fa-2x" id="fa-times"></i>
         <p>
             <label for="pseudoConnect">Pseudo : </label><br />
             <input type="text" id="pseudoConnect" name="pseudoConnect" />
