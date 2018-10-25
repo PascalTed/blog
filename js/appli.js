@@ -130,11 +130,11 @@ formConnexion.addEventListener("submit", function(e) {
 
         if (reponse === "noUser") {
             console.log("echoué");
-            document.getElementById("erreur").textContent = "Pseudo ou mot de passe incorrect";
+            document.getElementById("pseudo-pass-alert").textContent = "Pseudo ou mot de passe incorrect";
         }    
         if (reponse === "noPass") {
             console.log("echoué2");
-            document.getElementById("erreur").textContent = "Pseudo ou mot de passe incorrect";
+            document.getElementById("pseudo-pass-alert").textContent = "Pseudo ou mot de passe incorrect";
         }
         if (reponse === "valid") {
             console.log("réussi");
