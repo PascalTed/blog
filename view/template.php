@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <title>Blog de Jean Forteroche</title>
         <link href="css/style.css" rel="stylesheet" />
+        <link rel ="stylesheet" href="fontawesome/css/all.css">
     </head>
     
     <body>
