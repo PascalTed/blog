@@ -93,7 +93,7 @@ body
 /* Fin header */
 
 /* Début $content */
-#no-comment
+#no-comment, #pseudo-pass-alert
 {
     color: red;
 }
