@@ -6,6 +6,10 @@ if (connectWindow !== null) {
         document.getElementById("seConnecter").style.display = "block";
         document.body.style.backgroundColor = "grey";
     });
+    var closeWindowLogin = document.getElementById("fa-times");
+    closeWindowLogin.addEventListener("click", function() {
+        document.getElementById("seConnecter").style.display = "none";
+    });
 }
 
 var connectWindowToComment = document.getElementById("connect-to-comment");
