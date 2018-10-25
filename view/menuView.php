@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 
 <ul id="menu">
-    <li><a href="index.php">Acceuil</a></li>
+    <li><a href="index.php"><i class="fas fa-book"></i>Acceuil</a></li>
     <?php
     if (isset($_SESSION['pseudo'])) {
     ?>
