@@ -7,7 +7,7 @@
 
 <?php ob_start(); ?>
 
-<section>
+<section class="section-one">
 
     <h1>Billets du blog :</h1>
 
