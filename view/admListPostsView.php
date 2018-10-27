@@ -10,21 +10,20 @@
     <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
 </div>
 
-<h2>Billets du blog à modifier ou supprimer:</h2>
 
-
-
-<section>
+<section class="section-one">
+    
+    <h1>Billets du blog à modifier ou supprimer:</h1>
     
 <?php
 while ($data = $posts->fetch())
 {
 ?>
     <div class="news">
-        <h3>
+        <h2>
             <?= htmlspecialchars($data['title']); ?>
             <em>le <?= $data['creation_date_fr']; ?></em>
-        </h3>
+        </h2>
         
         <p>
             <?= nl2br(htmlspecialchars(substr($data['content'], 0, 100))); ?>...
