@@ -6,14 +6,16 @@
 
 <?php ob_start(); ?>
 
-<div>
-    <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
-</div>
+
 
 
 <section class="section-one">
     
     <h1>Billets du blog à modifier ou supprimer:</h1>
+    
+    <div class="link-adm">
+        <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
+    </div>
     
 <?php
 while ($data = $posts->fetch())
