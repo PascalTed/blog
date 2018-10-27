@@ -283,9 +283,16 @@ body
         transform: translate(-50%, -50%);
     }
     
+    #menu
+    {
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
+    }
+    
     #menu li
     {
         border-left: inherit;
+        border-top: 1px dashed white;
     }
     
     .section-one, #formulaireInscription
