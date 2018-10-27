@@ -41,7 +41,7 @@ if (connectWindow !== null) {
         document.getElementById("seConnecter").style.display = "block";
         document.body.style.backgroundColor = "grey";
     });
-    var closeWindowLogin = document.getElementById("fa-times");
+    var closeWindowLogin = document.getElementById("close-window-login");
     closeWindowLogin.addEventListener("click", function() {
         document.getElementById("seConnecter").style.display = "none";
     });
