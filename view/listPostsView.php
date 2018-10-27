@@ -1,4 +1,3 @@
-
 <?php require('menuView.php'); ?>
 <?php require('loginView.php'); ?>
 
@@ -6,19 +5,20 @@
 
 <?php ob_start(); ?>
 
-<h2>Billets du blog :</h2>
 
 <section class="section-one">
+    
+    <h1>Billets du blog :</h1>
     
 <?php
 while ($data = $posts->fetch())
 {
 ?>
     <div class="news">
-        <h3>
+        <h2>
             <?= htmlspecialchars($data['title']); ?>
             <em>le <?= $data['creation_date_fr']; ?></em>
-        </h3>
+        </h2>
         
         <p>
             <?= nl2br(htmlspecialchars(substr($data['content'], 0, 100))); ?>
