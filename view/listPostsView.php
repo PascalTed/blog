@@ -8,7 +8,7 @@
 
 <h2>Billets du blog :</h2>
 
-<section>
+<section class="section-one">
     
 <?php
 while ($data = $posts->fetch())
