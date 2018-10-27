@@ -44,12 +44,14 @@ body
 #open-menu
 {
     display: none;
+    cursor: pointer;
 }
 
 /* font awesome croix */
 #close-menu
 {
     display: none;
+    cursor: pointer;
 }
 
 #menu li
