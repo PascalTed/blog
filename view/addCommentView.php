@@ -3,7 +3,7 @@
 
 
 
-    <div>
+    <div id="commentaires">
         <h3>Commentaires</h3>
         <form action="index.php?action=addComment&amp;idPost=<?= $post['id'] ?>" method="post" id="form-add-comment">
             
