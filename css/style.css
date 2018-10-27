@@ -108,7 +108,7 @@ body
 
 /* Début $content */
 
-.section-one
+.section-one, #formulaireInscription
 {
     margin-top: 40px;
     padding-left: 5px;
@@ -116,7 +116,7 @@ body
 
 }
 
-.section-one h1
+.section-one h1, #formulaireInscription h1
 {
     text-align: center;
     margin-right: auto;
