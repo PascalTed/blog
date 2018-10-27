@@ -94,7 +94,7 @@ body
 }
 
 /* icône croix */ 
-.fa-times
+#close-window-login
 {
     position: absolute;
     top: 0px;
