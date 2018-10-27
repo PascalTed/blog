@@ -181,7 +181,7 @@ body
 /* Fin body */
 
 /* Responsive */
-@media all and (max-width: 800px){
+@media all and (max-width: 850px){
     
     
     #title-container
@@ -223,5 +223,11 @@ body
     #menu li
     {
         border-left: inherit;
+    }
+    
+    .section-one, #formulaireInscription
+    {
+        padding-left: 2%;
+        padding-right: 2%;
     }
 }
