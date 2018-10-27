@@ -7,8 +7,11 @@
 <?php ob_start(); ?>
 
         <section id="formulaireInscription">
+            
+            <h1>Inscription</h1>
+            
             <div>
-                <h1>Inscription</h1>
+                
                 <form action="index.php?action=createAccount" method="post">
                     <p>
                         <label for="pseudo">Pseudo : </label><br />
