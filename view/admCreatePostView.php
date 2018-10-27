@@ -10,9 +10,9 @@
     <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
 </div>
 
+<section class="section-one">
 
-
-<h2>Ajouter un billet</h2>  
+<h1>Ajouter un billet</h1>  
 
 <div>
     <form action="index.php?action=admEditPost" method="post" id="form-add-post">
@@ -28,6 +28,8 @@
         </p>
      </form>
 </div>
+
+</section>
 
 
 <?php $content = ob_get_clean(); ?>
