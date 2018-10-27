@@ -9,7 +9,7 @@
 
 <section>
 
-    <h2>Billets du blog :</h2>
+    <h1>Billets du blog :</h1>
 
     <p><a href="index.php">Retour à la liste des billets</a></p>
 
