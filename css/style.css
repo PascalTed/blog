@@ -105,6 +105,73 @@ body
 /* Fin header */
 
 /* Début $content */
+
+.section-one
+{
+    margin-top: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.section-one h1
+{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+    border-top: 6px solid rgb(51, 51, 51);
+    border-bottom: 6px solid rgb(51, 51, 51);
+    border-right: 2px dashed rgb(51, 51, 51); 
+    border-left: 2px dashed rgb(51, 51, 51); 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+    background-color: rgb(230, 230, 230);
+    
+    
+}
+
+.news
+{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    
+    margin-top: 40px;
+    
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.news h2
+{
+    border-radius: 4px 4px 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    text-align: center;
+}
+
+.news h2 em
+{
+    padding-left: 10px;
+}
+
+.news p
+{
+    background-color: rgb(230, 230, 230);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-indent: 15px;
+    line-height: 20px;
+}
+
 #no-comment, #pseudo-pass-alert
 {
     color: red;
