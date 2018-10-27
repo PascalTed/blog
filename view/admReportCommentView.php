@@ -10,11 +10,11 @@
     <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admListPosts">Billets créés</a></p>
 </div>
 
-<h2>Commentaires signalés</h2>
 
+<section class="section-one">
 
-
-<section>
+    <h1>Commentaires signalés</h1>
+    
     <?php
     $countReportComment = $comments->rowcount();
     while($comment = $comments->fetch()) {
