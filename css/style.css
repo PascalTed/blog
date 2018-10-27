@@ -111,8 +111,8 @@ body
 .section-one, #formulaireInscription
 {
     margin-top: 40px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
 
 }
 
@@ -137,9 +137,8 @@ body
 
 .news
 {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1000px;
+
+
     
     margin-top: 40px;
     
