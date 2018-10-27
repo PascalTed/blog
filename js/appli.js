@@ -1,3 +1,38 @@
+// Début affichage menu
+
+// Font awesome barres
+var openMenu = document.getElementById("open-menu");
+// Font awesome croix
+var closeMenu = document.getElementById("close-menu");
+
+var menu = document.getElementById("menu");
+
+openMenu.addEventListener("click", function() {
+    openMenu.style.display = "none";
+    closeMenu.style.display = "block";
+    menu.style.display = "block";
+});
+
+closeMenu.addEventListener("click", function() {
+    closeMenu.style.display = "none";
+    openMenu.style.display = "block";
+    menu.style.display = "none";    
+});
+    
+
+// media query
+var mediaQuery = window.matchMedia("(max-width: 800px)");
+mediaQuery.addListener(function(changed) {
+    if(mediaQuery.matches) {
+        openMenu.style.display = "block";
+        menu.style.display = "none";
+    } else {        
+        closeMenu.style.display = "none";
+        openMenu.style.display = "none";
+        menu.style.display = "flex";
+    } 
+});
+// Fin affichage menu
 
 // Début affichage de la fenêtre de connexion
 var connectWindow = document.getElementById("se-connecter");
