@@ -21,7 +21,7 @@ closeMenu.addEventListener("click", function() {
     
 
 // media query
-var mediaQuery = window.matchMedia("(max-width: 800px)");
+var mediaQuery = window.matchMedia("(max-width: 850px)");
 mediaQuery.addListener(function(changed) {
     if(mediaQuery.matches) {
         openMenu.style.display = "block";
