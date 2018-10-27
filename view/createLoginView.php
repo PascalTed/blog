@@ -33,8 +33,9 @@
                         <input type="submit" value="S'inscrire" />
                     </p>
                 </form>
+                <p><a href="index.php">Retour à la liste des billets</a></p>
             </div>
-            <p><a href="index.php">Retour Acceuil</a></p>
+            
         </section>
 
 <?php $content = ob_get_clean(); ?>
