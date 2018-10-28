@@ -38,7 +38,7 @@
         while ($comment = $comments->fetch())
         {
         ?>
-            <div class="all-comment">
+            <div class="all-comments">
                 <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
                 <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
                 <?php
