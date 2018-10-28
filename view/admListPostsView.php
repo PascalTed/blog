@@ -20,6 +20,10 @@
 <?php
 while ($data = $posts->fetch())
 {
+    $postExtract = $data['content'];
+    $postExtract = substr($postExtract, 0, 500);
+    $firstSpace = strrpos($postExtract, ' ');
+    $postExtract = substr($postExtract, 0, $firstSpace);
 ?>
     <div class="news">
         <h2>
@@ -28,7 +32,7 @@ while ($data = $posts->fetch())
         </h2>
         
         <p>
-            <?= nl2br(htmlspecialchars(substr($data['content'], 0, 100))); ?>...
+            <?= nl2br(htmlspecialchars($postExtract)); ?> ...
         </p>
         <p>
             <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
