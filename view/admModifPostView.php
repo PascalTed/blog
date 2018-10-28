@@ -22,7 +22,7 @@
 
                
         <label for="textarea-contenu">Modifier le contenu</label>
-        <textarea id="textarea-contenu" name="textarea-contenu"><?= nl2br(htmlspecialchars(substr($post['content'], 0, 100))); ?></textarea><br />
+        <textarea id="textarea-contenu" name="textarea-contenu"><?= nl2br(htmlspecialchars($post['content'])); ?></textarea><br />
         
         <input type="radio" name="setPost" value="modifyPost" id="modifyPost" checked /> <label for="modifyPost">Modifier le billet</label>
         
