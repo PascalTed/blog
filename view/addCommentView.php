@@ -12,7 +12,7 @@
             ?>
             <label for="add-comment">Laisser un commentaire</label><br />
             <textarea type="text" id="add-comment" name="add-comment" rows="10" cols="30"></textarea><br />
-            <span id="no-comment"></span><br />
+            <span id="no-comment"></span>
             <input type="submit" value="Envoyer commentaire" />
 
 
