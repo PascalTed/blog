@@ -236,6 +236,34 @@ body
     line-height: 20px;
 }
 
+/* Début Commentaires d'un billet */
+.all-comments
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-width: 500px;
+
+    border: 1px solid rgb(51, 51, 51);;
+    border-radius: 4px;
+}
+
+.all-comments > p
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    word-wrap: break-word;
+
+}
+
+.all-comments > p:first-child
+{
+     
+    margin-top: 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+/* Fin Commentaires d'un billet */
+
 /* admListPostsView */
 .modif-supp
 {
@@ -243,7 +271,7 @@ body
     padding-top: 0 !important;
 }
 
-#no-comment, #pseudo-pass-alert
+#no-comment, #pseudo-pass-alert, #no-connected
 {
     color: red;
 }
