@@ -236,6 +236,13 @@ body
     line-height: 20px;
 }
 
+/* admListPostsView */
+.modif-supp
+{
+    text-indent: 0 !important;
+    padding-top: 0 !important;
+}
+
 #no-comment, #pseudo-pass-alert
 {
     color: red;
