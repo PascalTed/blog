@@ -34,7 +34,7 @@ while ($data = $posts->fetch())
         <p>
             <?= nl2br(htmlspecialchars($postExtract)); ?> ...
         </p>
-        <p>
+        <p class="modif-supp">
             <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
         </p>
     </div>
