@@ -240,7 +240,10 @@ body
 
 #commentaires h3
 {
-    font-size: 20px;
+    font-size: 22px;
+    margin-top: 25px;
+    text-decoration: underline;
+
 }
 
 #add-comment
