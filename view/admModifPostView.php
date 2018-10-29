@@ -19,11 +19,11 @@
     <form class="form-tiny-mce" action="index.php?action=admModifyOrRemovePost&amp;idPost= <?= $post['id'] ?>" method="post">
         
         <label for="textarea-titre">Modifier le titre</label>
-        <textarea id="textarea-titre" name="textarea-titre"><?= htmlspecialchars($post['title']); ?></textarea><br />
+        <textarea id="textarea-titre" name="textarea-titre"><?= $post['title']; ?></textarea><br />
 
                
         <label for="textarea-contenu">Modifier le contenu</label>
-        <textarea id="textarea-contenu" name="textarea-contenu"><?= nl2br(htmlspecialchars($post['content'])); ?></textarea><br />
+        <textarea id="textarea-contenu" name="textarea-contenu"><?= $post['content']; ?></textarea><br />
         
         <input type="radio" name="setPost" value="modifyPost" id="modifyPost" checked /> <label for="modifyPost">Modifier le billet</label>
         
