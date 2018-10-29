@@ -128,11 +128,25 @@ body
     border-left: 2px dashed rgb(51, 51, 51); 
     padding: 10px 5px;
     font-size: 22px;
-    
-
     background-color: rgb(230, 230, 230);
-    
-    
+}
+
+#link-user > p
+{
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#link-user a
+{
+    color: black;
+    text-decoration: none;
+}
+
+#link-user a:visited
+{
+    color: black;
 }
 
 /* Début formulaire inscription */
