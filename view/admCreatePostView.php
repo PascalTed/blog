@@ -6,13 +6,15 @@
 
 <?php ob_start(); ?>
 
-<div>
-    <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
-</div>
+
 
 <section class="section-one">
 
-<h1>Ajouter un billet</h1>  
+<h1>Ajouter un billet</h1>
+    
+<div class="link-adm">
+    <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
+</div>
 
 <div>
     <form action="index.php?action=admEditPost" method="post" id="form-add-post">
