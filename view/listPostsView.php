@@ -20,12 +20,12 @@ while ($data = $posts->fetch())
 ?>
     <div class="news">
         <h2>
-            <?= htmlspecialchars($data['title']); ?>
+            <?= $data['title']; ?>
             <em>le <?= $data['creation_date_fr']; ?></em>
         </h2>
         
         <p>
-            <?= nl2br(htmlspecialchars($postExtract)); ?>
+            <?= $postExtract; ?>
             <em><a href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> ... lire la suite</a></em>
         </p>
     </div>
