@@ -131,6 +131,25 @@ body
     background-color: rgb(230, 230, 230);
 }
 
+/* Début modifier ou supprimer le billet */
+.form-tiny-mce
+{
+    margin-top: 25px;
+}
+
+.form-tiny-mce label[for="textarea-titre"], .form-tiny-mce label[for="textarea-contenu"]
+{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.form-tiny-mce input[type="submit"]
+{
+    margin-top: 15px;
+}
+
+/* Fin modifier ou supprimer le billet */
+
 #link-user > p, .link-adm > p
 {
     display: flex;
