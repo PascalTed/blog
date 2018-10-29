@@ -30,13 +30,15 @@ while ($data = $posts->fetch())
             <?= $data['title']; ?>
             <em>le <?= $data['creation_date_fr']; ?></em>
         </h2>
-        
-        <p>
+        <div class="news-contenu">
+            
             <?= $postExtract; ?> ...
-        </p>
-        <p class="modif-supp">
-            <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
-        </p>
+           
+            <p class="modif-supp">
+                <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
+            </p>
+        </div>
+
     </div>
 <?php
 }
