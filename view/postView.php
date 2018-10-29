@@ -11,7 +11,7 @@
 
     <h1>Lecture du billet</h1>
     <div id="link-user">
-        <p><a href="index.php">Retour à la liste des billets</a></p>
+        <p><a href="index.php">&lsaquo;&lsaquo; Retour à la liste des billets</a></p>
     </div>
     
 
@@ -41,7 +41,7 @@
         {
         ?>
             <div class="all-comments">
-                <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+                <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong><em> le <?= $comment['comment_date_fr'] ?></em></p>
                 <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
                 <?php
                 if (isset($_SESSION['pseudo'])) { 
