@@ -21,9 +21,9 @@
             <em>le <?= $post['creation_date_fr'] ?></em>
         </h2>
     
-        <p>
+        <div class="news-contenu">
             <?= $post['content'] ?>
-        </p>
+        </div>
     </div>
     
     <?= $addComment ?>
