@@ -6,13 +6,14 @@
 
 <?php ob_start(); ?>
 
-<div>
-    <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
-</div>
 
 <section class="section-one">
     
-<h1>modifier ou supprimer le billet :</h1>
+<h1>Modifier ou supprimer le billet</h1>
+    
+<div class="link-adm">
+    <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
+</div>
 
 <div>
     <form action="index.php?action=admModifyOrRemovePost&amp;idPost= <?= $post['id'] ?>" method="post">
