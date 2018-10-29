@@ -6,14 +6,14 @@
 
 <?php ob_start(); ?>
 
-<div>
-    <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admListPosts">Billets créés</a></p>
-</div>
-
 
 <section class="section-one">
 
     <h1>Commentaires signalés</h1>
+    
+    <div class="link-adm">
+    <p><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admListPosts">Billets créés</a></p>
+</div>
     
     <?php
     $countReportComment = $comments->rowcount();
