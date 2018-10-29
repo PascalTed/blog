@@ -17,7 +17,7 @@
 </div>
 
 <div>
-    <form action="index.php?action=admEditPost" method="post" id="form-add-post">
+    <form class="form-tiny-mce" action="index.php?action=admEditPost" method="post" id="form-add-post">
         <p>
             <label for="textarea-titre">Ajouter le titre</label>
             <textarea id="textarea-titre" name="textarea-titre"></textarea>
