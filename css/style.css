@@ -111,6 +111,7 @@ body
 .section-one, #formulaireInscription
 {
     margin-top: 40px;
+    margin-bottom: 40px;
     padding-left: 10%;
     padding-right: 10%;
 
@@ -280,17 +281,25 @@ body
     padding-left: 10px;
 }
 
-.news p
+.news-contenu
 {
     background-color: rgb(230, 230, 230);
-    margin-top: 0;
-    margin-bottom: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+
+}
+
+.news-contenu p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+
     padding-left: 10px;
     padding-right: 10px;
-    text-indent: 15px;
-    line-height: 20px;
+}
+.news-contenu p:last-child
+{
+    margin-top: 10px;
 }
 
 /* Début Commentaires d'un billet */
