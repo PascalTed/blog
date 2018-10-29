@@ -17,12 +17,12 @@
 
     <div class="news">
         <h2>
-            <?= htmlspecialchars($post['title']) ?>
+            <?= $post['title'] ?>
             <em>le <?= $post['creation_date_fr'] ?></em>
         </h2>
     
         <p>
-            <?= nl2br(htmlspecialchars($post['content'])) ?>
+            <?= $post['content'] ?>
         </p>
     </div>
     
