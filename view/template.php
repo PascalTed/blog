@@ -28,7 +28,7 @@
         <script src="js/tinymce/tinymce.js"></script>
         <script>
         tinymce.init({
-            selector: '#textarea-titre, #textarea-contenu', menubar: false, toolbar: 'undo redo | bold, italic | underline | strikethrough', forced_root_block: false, branding: false, statusbar: false
+            selector: '#textarea-titre, #textarea-contenu', menubar: false, toolbar: 'undo redo | bold, italic | underline | strikethrough', forced_root_block: false, branding: false, statusbar: false, entity_encoding : "raw"
         });
         </script>        
         <script src="js/ajaxpost.js"></script>
