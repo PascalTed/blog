@@ -131,22 +131,41 @@ body
     background-color: rgb(230, 230, 230);
 }
 
-#link-user > p
+#link-user > p, .link-adm > p
 {
+    display: flex;
     margin-top: 40px;
     font-weight: bold;
     font-size: 17px;
 }
 
-#link-user a
+#link-user a, .link-adm a
 {
     color: black;
     text-decoration: none;
+    background-color: rgb(230, 230, 230);
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-#link-user a:visited
+.link-adm a
+{
+    border-left: 1px solid rgb(51, 51, 51);
+}
+
+.link-adm a:first-child
+{
+    border-left: none;
+}
+
+#link-user a:visited, .link-adm a:visited
 {
     color: black;
+}
+
+#link-user a:hover, .link-adm a:hover
+{
+   background-color: rgb(175, 206, 207); 
 }
 
 /* Début formulaire inscription */
