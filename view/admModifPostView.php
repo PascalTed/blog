@@ -10,7 +10,7 @@
 <section class="section-one">
     
 <h1>Modifier ou supprimer le billet</h1>
-    
+ <?= $post['content']; ?>   
 <div class="link-adm">
     <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
 </div>
@@ -19,11 +19,11 @@
     <form class="form-tiny-mce" action="index.php?action=admModifyOrRemovePost&amp;idPost= <?= $post['id'] ?>" method="post">
         
         <label for="textarea-titre">Modifier le titre</label>
-        <textarea id="textarea-titre" name="textarea-titre"><?= $post['title']; ?></textarea><br />
+        <textarea id="textarea-titre" name="textarea-titre"><?= htmlspecialchars($post['title']); ?></textarea><br />
 
                
         <label for="textarea-contenu">Modifier le contenu</label>
-        <textarea id="textarea-contenu" name="textarea-contenu"><?= $post['content']; ?></textarea><br />
+        <textarea id="textarea-contenu" name="textarea-contenu"><?= htmlspecialchars($post['content']); ?></textarea><br />
         
         <input type="radio" name="setPost" value="modifyPost" id="modifyPost" checked /> <label for="modifyPost">Modifier le billet</label>
         
