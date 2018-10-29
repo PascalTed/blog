@@ -24,10 +24,10 @@ while ($data = $posts->fetch())
             <em>le <?= $data['creation_date_fr']; ?></em>
         </h2>
         
-        <p>
+        <div class="news-contenu">
             <?= $postExtract; ?>
             <em><a href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> ... lire la suite</a></em>
-        </p>
+        </div>
     </div>
 <?php
 }
