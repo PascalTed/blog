@@ -16,7 +16,7 @@
 </div>
 
 <div>
-    <form action="index.php?action=admModifyOrRemovePost&amp;idPost= <?= $post['id'] ?>" method="post">
+    <form class="form-tiny-mce" action="index.php?action=admModifyOrRemovePost&amp;idPost= <?= $post['id'] ?>" method="post">
         
         <label for="textarea-titre">Modifier le titre</label>
         <textarea id="textarea-titre" name="textarea-titre"><?= htmlspecialchars($post['title']); ?></textarea><br />
