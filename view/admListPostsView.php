@@ -27,12 +27,12 @@ while ($data = $posts->fetch())
 ?>
     <div class="news">
         <h2>
-            <?= htmlspecialchars($data['title']); ?>
+            <?= $data['title']; ?>
             <em>le <?= $data['creation_date_fr']; ?></em>
         </h2>
         
         <p>
-            <?= nl2br(htmlspecialchars($postExtract)); ?> ...
+            <?= $postExtract; ?> ...
         </p>
         <p class="modif-supp">
             <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
