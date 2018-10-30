@@ -40,6 +40,9 @@ if (connectWindow !== null) {
     connectWindow.addEventListener("click", function() {
         document.getElementById("seConnecter").style.display = "block";
         document.getElementById("opaque-window").style.display = "block";
+        closeMenu.style.display = "none";
+    openMenu.style.display = "block";
+    menu.style.display = "none"; 
     });
     var closeWindowLogin = document.getElementById("close-window-login");
     closeWindowLogin.addEventListener("click", function() {
@@ -55,6 +58,13 @@ if (connectWindowToComment !== null) {
         document.getElementById("opaque-window").style.display = "block";
     });
 }
+
+document.getElementById("opaque-window").addEventListener("click", function() {
+    document.getElementById("opaque-window").style.display = "none";
+    document.getElementById("seConnecter").style.display = "none";
+
+});
+
 // Fin affichage de la fenêtre de connexion
 
 // Début vérification infos création compte. Si le pseudo et le mail n'existe pas, le compte est créé
