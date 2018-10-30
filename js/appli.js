@@ -44,6 +44,7 @@ if (connectWindow !== null) {
     var closeWindowLogin = document.getElementById("close-window-login");
     closeWindowLogin.addEventListener("click", function() {
         document.getElementById("seConnecter").style.display = "none";
+        document.getElementById("opaque-window").style.display = "none";
     });
 }
 
