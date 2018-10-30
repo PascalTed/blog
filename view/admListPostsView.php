@@ -21,10 +21,9 @@
 while ($data = $posts->fetch())
 {
     $postExtract = $data['content'];
-    var_dump($postExtract);
     $postExtract = substr($postExtract, 0, 300);
     $firstSpace = strrpos($postExtract, '<p');
-    var_dump($firstSpace);
+
     if ($firstSpace == false) {
         $firstSpace = strrpos($postExtract, ' ');
         $postExtract = substr($postExtract, 0, $firstSpace);
