@@ -39,7 +39,7 @@ var connectWindow = document.getElementById("se-connecter");
 if (connectWindow !== null) {
     connectWindow.addEventListener("click", function() {
         document.getElementById("seConnecter").style.display = "block";
-        document.body.style.backgroundColor = "grey";
+        document.getElementById("opaque-window").style.display = "block";
     });
     var closeWindowLogin = document.getElementById("close-window-login");
     closeWindowLogin.addEventListener("click", function() {
@@ -51,7 +51,7 @@ var connectWindowToComment = document.getElementById("connect-to-comment");
 if (connectWindowToComment !== null) {
     connectWindowToComment.addEventListener("click", function() {
         document.getElementById("seConnecter").style.display = "block";
-        document.body.style.backgroundColor = "grey";
+        document.getElementById("opaque-window").style.display = "block";
     });
 }
 // Fin affichage de la fenêtre de connexion
