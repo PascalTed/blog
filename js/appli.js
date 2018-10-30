@@ -42,9 +42,9 @@ if (connectWindow !== null) {
         document.getElementById("seConnecter").style.display = "block";
         document.getElementById("opaque-window").style.display = "block";
         
-        openMenu.style.display = "block";
-        menu.style.display = "none";
-        closeMenu.style.display = "none";
+        
+        
+        
         
         document.getElementById("opaque-window").addEventListener("click", function() {
         document.getElementById("opaque-window").style.display = "none";
@@ -52,13 +52,13 @@ if (connectWindow !== null) {
 
 });
  
-    });
+    }); }
     var closeWindowLogin = document.getElementById("close-window-login");
     closeWindowLogin.addEventListener("click", function() {
         document.getElementById("seConnecter").style.display = "none";
         document.getElementById("opaque-window").style.display = "none";
     });
-}
+
 
 var connectWindowToComment = document.getElementById("connect-to-comment");
 if (connectWindowToComment !== null) {
