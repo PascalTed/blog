@@ -5,43 +5,44 @@
 
 <?php ob_start(); ?>
 
-
 <section class="section-one">
     
     <h1>Billets du blog :</h1>
     
-<?php
-while ($data = $posts->fetch())
-{
-    $postExtract = $data['content'];
-    $postExtract = substr($postExtract, 0, 300);
-    $firstSpace = strrpos($postExtract, '<p');
+    <?php
+    while ($data = $posts->fetch()) {
+        // Récupérer extrait du billet
+        $postExtract = $data['content'];
+        $postExtract = substr($postExtract, 0, 500);
+        $firstSpace = strrpos($postExtract, '<p');
 
-    if ($firstSpace == false) {
-        $firstSpace = strrpos($postExtract, ' ');
-        $postExtract = substr($postExtract, 0, $firstSpace);
-    } else {
-        $postExtract = substr($postExtract, 0, $firstSpace);
-        $firstSpace = strrpos($postExtract, ' ');
-        $postExtract = substr($postExtract, 0, $firstSpace);
-    }
-        
-?>
+        if ($firstSpace == false) {
+            $firstSpace = strrpos($postExtract, ' ');
+            $postExtract = substr($postExtract, 0, $firstSpace);
+        } else {
+            $postExtract = substr($postExtract, 0, $firstSpace);
+            $firstSpace = strrpos($postExtract, ' ');
+            $postExtract = substr($postExtract, 0, $firstSpace);
+        }
+    ?>
+    
+    <!-- Affichage du billet --> 
     <div class="news">
         <h2>
             <?= $data['title']; ?>
             <em>le <?= $data['creation_date_fr']; ?></em>
         </h2>
-        
+
         <div class="news-contenu">
             <?= $postExtract; ?>
-            <em><a href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> ... lire la suite</a></em>
+            <a href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> <em><strong>... lire la suite</strong></em></a>
         </div>
     </div>
-<?php
-}
-$posts->closeCursor();
-?>
+    
+    <?php
+    }
+    $posts->closeCursor();
+    ?>
     
 </section>
 
