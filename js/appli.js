@@ -254,7 +254,7 @@ if (formCreatePost !== null) {
         }
         console.log(valueContent);
         if (valueTitle !== "" && valueContent !== "") {
-            //formCreatePost.submit();
+            formCreatePost.submit();
             console.log("envoyer");
         }
     });
