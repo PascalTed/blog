@@ -82,7 +82,7 @@ body
 {
     position: fixed;
     display: none;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 9998;
     top: 0;
     left: 0;
