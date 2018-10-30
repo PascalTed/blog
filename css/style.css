@@ -110,7 +110,7 @@ body
     height: auto;
     width: 350px;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #seConnecter p:nth-child(1), #seConnecter p:nth-child(2)
@@ -131,7 +131,7 @@ body
 
 #seConnecter input[type="submit"]
 {
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
 }
 
