@@ -19,15 +19,16 @@
     $countReportComment = $comments->rowcount();
     while($comment = $comments->fetch()) {
     ?>    
-        <div>
+        <div class="valid-delete-comment">
             <p>
-                Titre du billet : <?= $comment['title'] ?>
+                <strong>Titre du billet : </strong><?= $comment['title'] ?>
             </p>
             <p>
-                Commentaire signalé : "<?= htmlspecialchars($comment['comment']); ?>"
+                <strong>Commentaire signalé : </strong><br />
+                "<?= htmlspecialchars($comment['comment']); ?>"
             </p>
             <p>
-                <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider commentaire</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer commentaire</a>    
+                <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider le commentaire</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer le commentaire</a>    
             </p>
 
         </div>
