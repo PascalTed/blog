@@ -21,9 +21,18 @@
 while ($data = $posts->fetch())
 {
     $postExtract = $data['content'];
-    $postExtract = substr($postExtract, 0, 500);
-    $firstSpace = strrpos($postExtract, ' ');
-    $postExtract = substr($postExtract, 0, $firstSpace);
+    var_dump($postExtract);
+    $postExtract = substr($postExtract, 0, 300);
+    $firstSpace = strrpos($postExtract, '<p');
+    var_dump($firstSpace);
+    if ($firstSpace == false) {
+        $firstSpace = strrpos($postExtract, ' ');
+        $postExtract = substr($postExtract, 0, $firstSpace);
+    } else {
+        $postExtract = substr($postExtract, 0, $firstSpace);
+        $firstSpace = strrpos($postExtract, ' ');
+        $postExtract = substr($postExtract, 0, $firstSpace);
+    }
 ?>
     <div class="news">
         <h2>
