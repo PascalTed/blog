@@ -10,7 +10,7 @@
 <section class="section-one">
     
 <h1>Modifier ou supprimer le billet</h1>
- <?= $post['content']; ?>   
+
 <div class="link-adm">
     <p><a href="index.php?action=admListPosts">Billets créés</a><a href="index.php?action=admCreatePost">Ajouter des billets</a><a href="index.php?action=admReportComment">Commentaires signalés</a></p>
 </div>
