@@ -22,7 +22,7 @@
                 </div>
             </div>
         </header>
-        <div id="opaque"></div>
+        <div id="opaque-window"></div>
         <?= $content ?>
         
         <!-- script -->
