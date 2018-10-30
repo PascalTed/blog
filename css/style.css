@@ -284,8 +284,7 @@ body
 .news-contenu
 {
     background-color: rgb(230, 230, 230);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 
 }
 
@@ -294,8 +293,6 @@ body
     margin-top: 0;
     margin-bottom: 0;
 
-    padding-left: 10px;
-    padding-right: 10px;
 }
 .news-contenu p:last-child
 {
@@ -355,11 +352,6 @@ body
 /* Fin Commentaires d'un billet */
 
 /* admListPostsView */
-.modif-supp
-{
-    text-indent: 0 !important;
-    padding-top: 0 !important;
-}
 
 #no-comment, #pseudo-pass-alert, #no-connected
 {
