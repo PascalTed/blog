@@ -211,6 +211,7 @@ body
     background-color: rgb(230, 230, 230);
     padding-left: 4px;
     padding-right: 4px;
+    text-align: center;
 }
 
 .link-adm a
@@ -527,6 +528,11 @@ body
         padding-right: 2%;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    
+    .form-tiny-mce
+    {
+        margin-top: 10px;
     }
      
     .news
