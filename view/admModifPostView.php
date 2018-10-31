@@ -22,11 +22,13 @@
 
             <label for="textarea-contenu">Modifier le contenu</label>
             <textarea id="textarea-contenu" name="textarea-contenu"><?= htmlspecialchars($post['content']); ?></textarea><br />
-
-            <input type="radio" name="setPost" value="modifyPost" id="modifyPost" checked /> <label for="modifyPost">Modifier le billet</label>
-
-            <input type="radio" name="setPost" value="admRemovePostComments" id="admRemovePostComments" /> <label for="admRemovePostComments">Supprimer le billet</label><br />
-
+            
+            <div id="label-flex">
+                <label for="modifyPost"><input type="radio" name="setPost" value="modifyPost" id="modifyPost" checked />Modifier le billet</label>
+            
+                <label for="admRemovePostComments"><input type="radio" name="setPost" value="admRemovePostComments" id="admRemovePostComments" /> Supprimer le billet</label><br />
+            </div>
+            
             <input type="submit" value="Envoyer" />
         </form>
     </div>
