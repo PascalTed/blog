@@ -213,7 +213,7 @@ body
 
 /* Fin modifier ou supprimer le billet */
 
-#link-user > p, .link-adm > p
+.link-user > p, .link-adm > p
 {
     display: flex;
     margin-top: 40px;
@@ -221,7 +221,7 @@ body
     font-size: 18px;
 }
 
-#link-user a, .link-adm a
+.link-user a, .link-adm a
 {
     color: black;
     text-decoration: none;
@@ -241,12 +241,12 @@ body
     border-left: none;
 }
 
-#link-user a:visited, .link-adm a:visited
+.link-user a:visited, .link-adm a:visited
 {
     color: black;
 }
 
-#link-user a:hover, .link-adm a:hover
+.link-user a:hover, .link-adm a:hover
 {
    background-color: rgb(175, 206, 207); 
 }
@@ -534,7 +534,7 @@ body
         border-top: 1px dashed white;
     }
     
-        #link-user > p, .link-adm > p
+        .link-user > p, .link-adm > p
     {
         margin-top: 10px;
     }
