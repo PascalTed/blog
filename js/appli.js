@@ -2,10 +2,24 @@
 
 // Font awesome barres
 var openMenu = document.getElementById("open-menu");
+
 // Font awesome croix
 var closeMenu = document.getElementById("close-menu");
 
 var menu = document.getElementById("menu");
+
+var mediaQuery = window.matchMedia("(max-width: 850px)");
+
+mediaQuery.addListener(function(changed) {
+    if(mediaQuery.matches) {
+        openMenu.style.display = "block";
+        menu.style.display = "none";
+    } else {        
+        closeMenu.style.display = "none";
+        openMenu.style.display = "none";
+        menu.style.display = "flex";
+    } 
+});
 
 openMenu.addEventListener("click", function() {
     openMenu.style.display = "none";
@@ -18,58 +32,41 @@ closeMenu.addEventListener("click", function() {
     openMenu.style.display = "block";
     menu.style.display = "none";    
 });
-    
-
-// media query
-var mediaQuery = window.matchMedia("(max-width: 850px)");
-mediaQuery.addListener(function(changed) {
-    if(mediaQuery.matches) {
-        openMenu.style.display = "block";
-        menu.style.display = "none";
-    } else {        
-        closeMenu.style.display = "none";
-        openMenu.style.display = "none";
-        menu.style.display = "flex";
-    } 
-});
 // Fin affichage menu
 
 // Début affichage de la fenêtre de connexion
+var toLogIn = document.getElementById("seConnecter");
+var opaqueWindow = document.getElementById("opaque-window");
 var connectWindow = document.getElementById("se-connecter");
+
 if (connectWindow !== null) {
+    
     connectWindow.addEventListener("click", function() {
-        
-        document.getElementById("seConnecter").style.display = "block";
-        document.getElementById("opaque-window").style.display = "block";
-        
-        
-        
-        
-        
-        document.getElementById("opaque-window").addEventListener("click", function() {
-        document.getElementById("opaque-window").style.display = "none";
-        document.getElementById("seConnecter").style.display = "none";
-
-});
- 
-    }); }
-    var closeWindowLogin = document.getElementById("close-window-login");
-    closeWindowLogin.addEventListener("click", function() {
-        document.getElementById("seConnecter").style.display = "none";
-        document.getElementById("opaque-window").style.display = "none";
-    });
-
-
-var connectWindowToComment = document.getElementById("connect-to-comment");
-if (connectWindowToComment !== null) {
-    connectWindowToComment.addEventListener("click", function() {
-        document.getElementById("seConnecter").style.display = "block";
-        document.getElementById("opaque-window").style.display = "block";
-    });
+        toLogIn.style.display = "block";
+        opaqueWindow.style.display = "block";
+                
+        opaqueWindow.addEventListener("click", function() {
+            opaqueWindow.style.display = "none";
+            toLogIn.style.display = "none";
+        });
+    }); 
 }
 
+var closeWindowLogin = document.getElementById("close-window-login");
 
+    closeWindowLogin.addEventListener("click", function() {
+        toLogIn.style.display = "none";
+        opaqueWindow.style.display = "none";
+    });
 
+var connectWindowToComment = document.getElementById("connect-to-comment");
+
+if (connectWindowToComment !== null) {
+    connectWindowToComment.addEventListener("click", function() {
+        toLogIn.style.display = "block";
+        opaqueWindow.style.display = "block";
+    });
+}
 // Fin affichage de la fenêtre de connexion
 
 // Début vérification infos création compte. Si le pseudo et le mail n'existe pas, le compte est créé
@@ -82,8 +79,7 @@ var messageVerifPass = document.getElementById("alertVerifPassword");
 
 if (formInscription !== null) {
     
-    formInscription.addEventListener("submit", function (e) {
-            
+    formInscription.addEventListener("submit", function (e) {    
         e.preventDefault();
             
         var userCreate = document.getElementById("pseudo").value;
@@ -101,10 +97,7 @@ if (formInscription !== null) {
         var ajaxPostCreate = Object.create(AjaxPost);
         
         ajaxPostCreate.init("index.php?action=verifCreateAccount", dataSend, function(reponse) {
-  
-            console.log("test");
-            console.log(dataSend);
-            
+
             if (reponse !== "existUser") {
                 console.log("user libre");                   
             } else {
