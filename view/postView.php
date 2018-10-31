@@ -10,7 +10,7 @@
 <section class="section-one">
 
     <h1>Lecture du billet</h1>
-    <div id="link-user">
+    <div class="link-user">
         <p><a href="index.php">&lsaquo;&lsaquo; Retour à la liste des billets</a></p>
     </div>
 
