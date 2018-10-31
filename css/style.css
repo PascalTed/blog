@@ -80,6 +80,11 @@ body
     font-size: 18px;
 }
 
+#menu li a:hover
+{
+    box-shadow: 0px 5px 0px 0px rgb(175, 206, 207);
+}
+
 #opaque-window
 {
     position: fixed;
@@ -221,6 +226,8 @@ body
     font-weight: bold;
     font-size: 18px;
 }
+
+
 
 .link-user a, .link-adm a
 {
@@ -545,6 +552,11 @@ body
         .link-user > p, .link-adm > p
     {
         margin-top: 10px;
+    }
+    
+    #menu li a:hover
+    {
+        box-shadow: -5px 0px 0px 0px rgb(175, 206, 207);
     }
     
     .section-one, #formulaireInscription
