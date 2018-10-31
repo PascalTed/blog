@@ -120,6 +120,16 @@ body
     font-size: 18px;
 }
 
+/* icône croix */ 
+#close-window-login
+{
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+}
+
 #seConnecter input[type="text"], #seConnecter input[type="password"]
 {
     border: 1px solid rgb(190, 190, 190);
@@ -137,14 +147,10 @@ body
     cursor: pointer;
 }
 
-/* icône croix */ 
-#close-window-login
+/* Message : "Pseudo ou mot de passe incorrect" */
+#pseudo-pass-alert
 {
-    position: absolute;
-    top: 0px;
-    right: 4px;
-    cursor: pointer;
-    color: rgb(51, 51, 51);
+    color: red;
 }
 /* Fin fenêtre se connecter */
 /* Fin menu */
@@ -174,48 +180,6 @@ body
     background-color: rgb(230, 230, 230);
 }
 
-/* Début modifier ou supprimer le billet */
-.form-tiny-mce
-{
-    margin-top: 25px;
-}
-
-.form-tiny-mce label[for="textarea-titre"], .form-tiny-mce label[for="textarea-contenu"]
-{
-    font-weight: bold;
-    font-size: 17px;
-}
-
-.form-tiny-mce #label-radio
-{
-    display: flex;
-    text-align: center;
-}
-
-.form-tiny-mce #label-radio input
-{
-    cursor: pointer;
-}
-
-.form-tiny-mce #label-radio label + label
-{
-    padding-left: 10px;
-}
-
-.form-tiny-mce input[type="submit"]
-{
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.form-tiny-mce input[value="Ajouter le billet"]
-{
-    margin-top: 0;
-}
-
-/* Fin modifier ou supprimer le billet */
-
 .link-user > p, .link-adm > p
 {
     display: flex;
@@ -223,8 +187,6 @@ body
     font-weight: bold;
     font-size: 18px;
 }
-
-
 
 .link-user a, .link-adm a
 {
@@ -234,16 +196,6 @@ body
     padding-left: 4px;
     padding-right: 4px;
     text-align: center;
-}
-
-.link-adm a
-{
-    border-left: 1px solid rgb(51, 51, 51);
-}
-
-.link-adm a:first-child
-{
-    border-left: none;
 }
 
 .link-user a:visited, .link-adm a:visited
@@ -256,6 +208,66 @@ body
    background-color: rgb(175, 206, 207); 
 }
 
+.link-adm a
+{
+    border-left: 1px solid rgb(51, 51, 51);
+}
+
+.link-adm a:first-child
+{
+    border-left: none;
+}
+
+/* Début formulaires Tinymce : Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" (partie administrateur) */
+
+/* Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce
+{
+    margin-top: 25px;
+}
+
+/* Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce label[for="textarea-titre"], .form-tiny-mce label[for="textarea-contenu"]
+{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce #label-radio
+{
+    display: flex;
+    text-align: center;
+}
+
+/* Formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce #label-radio input
+{
+    cursor: pointer;
+}
+
+/* Formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce #label-radio label + label
+{
+    padding-left: 10px;
+}
+
+/* Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce input[type="submit"]
+{
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Formulaire "ajouter le billet" */
+.form-tiny-mce input[value="Ajouter le billet"]
+{
+    margin-top: 0;
+}
+/* Fin formulaires Tinymce : Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" (partie administrateur) */
+
+/* Début Commentaires signalés (partie administrateur)*/
 .valid-delete-comment
 {
     border: 1px solid rgb(51, 51, 51);
@@ -296,6 +308,7 @@ body
 {
     padding-left: 20px;
 }
+/* Fin Commentaires signalés (partie administrateur) */
 
 /* Début formulaire inscription */
 #formulaireInscription div
@@ -307,7 +320,6 @@ body
 {
     max-width: 494px;
     font-size: 18px;
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -317,32 +329,18 @@ body
     margin-left: auto;
     margin-right: auto;
     max-width: 450px;
-    
     padding: 20px;
     border-top: 8px solid rgb(51, 51, 51);
     border-bottom: 8px solid rgb(51, 51, 51);
     border-right: 2px solid rgb(51, 51, 51);
     border-left: 2px solid rgb(51, 51, 51);
     border-radius: 4px;
-    
-}
+ }
 
 #formulaireInscription form p
 {
-
-  
     font-size: 18px;
     margin-bottom: 40px;
-    
-   
-}
-
-#formulaireInscription form p:last-child
-{
-
-    margin-bottom: 18px;
-    
-   
 }
 
 #formulaireInscription input
@@ -354,7 +352,11 @@ body
     margin-top: 10px;
     border: 1px solid rgb(209, 209, 209);
     background-color: rgb(230, 230, 230);
-    
+}
+
+#formulaireInscription form p:last-child
+{
+    margin-bottom: 18px;
 }
 
 #formulaireInscription input[type="submit"]
@@ -363,10 +365,10 @@ body
     width: 100px;
     border: 1px solid rgb(51, 51, 51);
     border-radius: 4px;
-
 }
 /* Fin formulaire inscription */
 
+/* Début contenu billet (titre et texte) */
 .news
 {
     margin-top: 40px;
@@ -401,15 +403,14 @@ body
 {
     margin-top: 0;
     margin-bottom: 0;
-
 }
 .news-contenu p:last-child
 {
     margin-top: 10px;
 }
+/* Fin contenu billet (titre et texte) */
 
 /* Début Commentaires d'un billet */
-
 #commentaires h3
 {
     font-size: 22px;
@@ -417,10 +418,26 @@ body
     text-decoration: underline;
 }
 
+/* Message : "Il faut être connecté pour ajouter ou signaler un commentaire." */
+#commentaires #no-connected
+{
+    color: red;
+}
 
-#no-comment
+/* Champ : "Laisser un commentaire" */
+#commentaires #add-comment
+{
+    font-size: 15px;
+    width: 350px;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+/* Message : "Le champ commentaire n'est pas rempli." */
+#commentaires #no-comment
 {
     display: block;
+    color: red;
 }
 
 #form-add-comment input[type="submit"]
@@ -428,21 +445,11 @@ body
     margin-top: 5px;
 }
 
-#add-comment
-{
-    font-size: 15px;
-    width: 350px;
-    height: 150px;
-    box-sizing: border-box;
-    
-}
-
 .all-comments
 {
     margin-top: 25px;
     margin-bottom: 25px;
     max-width: 500px;
-
     border: 1px solid rgb(51, 51, 51);;
     border-radius: 4px;
 }
@@ -452,12 +459,10 @@ body
     padding-left: 10px;
     padding-right: 10px;
     word-wrap: break-word;
-
 }
 
 .all-comments > p:first-child
 {
-     
     margin-top: 0;
     background-color: rgb(51, 51, 51);
     color: white;
@@ -468,53 +473,31 @@ body
     font-size: 15px;
 }
 /* Fin Commentaires d'un billet */
-
-/* admListPostsView */
-
-#no-comment, #pseudo-pass-alert, #no-connected
-{
-    color: red;
-}
-
-
 /* Fin $content */
 /* Fin body */
 
-/* Responsive */
+/* Début media queries */
+/* Début media queries max-width: 1500px */
 @media all and (max-width: 1500px){
-
+    /* $content */
     .section-one, #formulaireInscription
     {
-
         padding-left: 10%;
         padding-right: 10%;
-
     }
-
-
 }
+/* Fin media queries max-width: 1500px */
 
+/* Début media queries max-width: 850px */
 @media all and (max-width: 850px){
     
-    
+    /*  Début header  */
     #title-container
     {
         width: 80%;
         text-align: left;
     }
-    
-    
-    #menu
-    {
-        display: none;
-        position: absolute;
-        z-index: 9997;
-        background-color: rgb(51, 51, 51);
-        height: inherit;
-        top: 50px;
-        right: 0;
-    }
-    
+     
     /* font awesome barres */
     #open-menu
     {
@@ -534,10 +517,18 @@ body
         transform: translate(-50%, -50%);
     }
     
+    /* Début menu */
     #menu
     {
+        display: none;
+        position: absolute;
+        z-index: 9997;
+        background-color: rgb(51, 51, 51);
         border-bottom: 1px solid white;
         border-left: 1px solid white;
+        height: inherit;
+        top: 50px;
+        right: 0;
     }
     
     #menu li
@@ -546,16 +537,14 @@ body
         border-top: 1px dashed white;
     }
     
-        .link-user > p, .link-adm > p
-    {
-        margin-top: 10px;
-    }
-    
     #menu li a:hover
     {
         box-shadow: -5px 0px 0px 0px rgb(175, 206, 207);
     }
+    /* Fin menu */
+    /* Fin header */
     
+    /* Début $content */
     .section-one, #formulaireInscription
     {
         padding-left: 2%;
@@ -564,48 +553,60 @@ body
         margin-bottom: 20px;
     }
     
-        #formulaireInscription form p
+    .link-user > p, .link-adm > p
     {
-
-        margin-bottom: 0;
+        margin-top: 10px;
     }
-    
+ 
+    /* Début formulaire inscription */
     #formulaireInscription div
     {
         margin-top: 20px;
     }
     
+    #formulaireInscription form p
+    {
+        margin-bottom: 0;
+    }
+    /* Fin formulaire inscription */
+    
+    /* formulaires Tinymce : Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" (partie administrateur) */
     .form-tiny-mce
     {
         margin-top: 10px;
     }
     
+    /* Commentaires signalés (partie administrateur)*/
     .valid-delete-comment
     {
         margin-top: 20px;
     }
     
+    /*contenu billet (titre et texte) */
     .news
     {
         margin-top: 20px;
     }
     
+    /* Commentaires d'un billet */
     #commentaires h3
     {
         margin-top: 10px;
         margin-bottom: 10px;
     }
 }
+/* Fin media queries max-width: 850px */
 
+/* Début media queries max-width: 500px */
 @media all and (max-width: 500px){
     
+    /* fenêtre se connecter */
     #seConnecter
     {
         width: 80%;
     }
     
-
-
+    /* Début commentaires signalés (partie administrateur)*/
     .valid-delete-comment p:last-child
     {
         justify-content: space-between;
@@ -617,9 +618,13 @@ body
     {
         text-align: center;
     }
+    /* Fin commentaires signalés (partie administrateur)*/
     
-    #add-comment
+    /* Commentaires d'un billet */
+    /* Champ : "Laisser un commentaire" */
+    #commentaires #add-comment
     {
         width: 100%;
     }
 }
+/* Fin media queries max-width: 500px */
