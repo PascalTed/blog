@@ -19,7 +19,7 @@
             ?>
         
             <p id="no-connected">Il faut être connecté pour ajouter ou signaler un commentaire.</p>
-            <p><a href="#" id="connect-to-comment">se connecter</a></p>
+            <p><a href="#" id="connect-to-comment">Se connecter</a></p>
         
             <?php
             }
