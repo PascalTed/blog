@@ -8,7 +8,11 @@
 <section id="formulaireInscription">
 
     <h1>Inscription</h1>
-
+    
+    <div class="link-user">
+        <p><a href="index.php">&lsaquo;&lsaquo; Retour à la liste des billets</a></p>
+    </div>
+           
     <div>
         <form action="index.php?action=createAccount" method="post">
             <p><em>Les champs obligatoires sont indiqués avec *</em></p>
@@ -37,8 +41,6 @@
                 <input type="submit" value="S'inscrire" />
             </p>
         </form>
-        
-        <p><a href="index.php">Retour à la liste des billets</a></p>
     </div>
 
 </section>
