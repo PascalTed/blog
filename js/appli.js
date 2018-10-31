@@ -149,7 +149,6 @@ if (formInscription !== null) {
 var formConnexion = document.querySelector("#seConnecter > form");
 
 formConnexion.addEventListener("submit", function(e) {
-    
     e.preventDefault();
     
     var User = document.getElementById('pseudoConnect').value;
@@ -159,23 +158,16 @@ formConnexion.addEventListener("submit", function(e) {
     var ajaxPostConnect = Object.create(AjaxPost);
     
     ajaxPostConnect.init("index.php?action=connectAccount", dataSend, function(reponse) {
-    
-        console.log("test");
-        console.log(dataSend);
-        console.log(reponse);
 
         if (reponse === "noUser") {
-            console.log("echoué");
             document.getElementById("pseudo-pass-alert").textContent = "Pseudo ou mot de passe incorrect";
         }    
         if (reponse === "noPass") {
-            console.log("echoué2");
             document.getElementById("pseudo-pass-alert").textContent = "Pseudo ou mot de passe incorrect";
         }
         if (reponse === "valid") {
-            console.log("réussi");
             formConnexion.submit();
-            }
+        }
     });
     ajaxPostConnect.executer();
 });
@@ -188,7 +180,6 @@ var textAreaComment = document.getElementById("add-comment");
 
 if (formTextComment !== null) {
     formTextComment.addEventListener("submit", function (e) {
-
         e.preventDefault();
 
         var valueTextComment = textAreaComment.value;
@@ -220,29 +211,22 @@ if (formCreatePost !== null) {
         
         var valueTitle = textAreaCreateTitle.value;
         var valueContent = textAreaCreateContent.value;
-        console.log(tinymce.get("textarea-titre"));
         
         if (valueTitle === "") {
             noTitle.textContent = "Il faut ajouter un titre pour ajouter le billet"
             tinymce.get("textarea-titre").on("click", function () {
                 noTitle.textContent = "";
             });
-
         }
-                console.log(valueTitle);
         if (valueContent === "") {
-            
             noContent.textContent = "Il faut ajouter le contenu pour ajouter le billet"
             tinymce.get("textarea-contenu").on("click", function () {
                 noContent.textContent = "";
             });
         }
-        console.log(valueContent);
         if (valueTitle !== "" && valueContent !== "") {
             formCreatePost.submit();
-            console.log("envoyer");
         }
     });
-
 }
 // Fin vérification textarea "Ajouter le titre" et "Ajouter le contenu"
