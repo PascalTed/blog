@@ -184,6 +184,17 @@ body
     font-size: 17px;
 }
 
+.form-tiny-mce #label-radio
+{
+    display: flex;
+    text-align: center;
+}
+
+.form-tiny-mce #label-radio label + label
+{
+    padding-left: 10px;
+}
+
 .form-tiny-mce input[type="submit"]
 {
     margin-top: 15px;
