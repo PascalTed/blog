@@ -190,6 +190,11 @@ body
     text-align: center;
 }
 
+.form-tiny-mce #label-radio input
+{
+    cursor: pointer;
+}
+
 .form-tiny-mce #label-radio label + label
 {
     padding-left: 10px;
@@ -198,6 +203,7 @@ body
 .form-tiny-mce input[type="submit"]
 {
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .form-tiny-mce input[value="Ajouter le billet"]
