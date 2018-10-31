@@ -98,32 +98,24 @@ if (formInscription !== null) {
         
         ajaxPostCreate.init("index.php?action=verifCreateAccount", dataSend, function(reponse) {
 
-            if (reponse !== "existUser") {
-                console.log("user libre");                   
-            } else {
-                console.log("user existant");
+            if (reponse === "existUser") {
+
                 messagePseudo.textContent = "Pseudo déjà existant";
                 document.getElementById("pseudo").addEventListener("click", function () {
                     messagePseudo.textContent = "";
                 });
             }
-            if (reponse !== "existEmail") {
-                console.log("mail libre"); 
-            } else {
-                console.log("email existant");
+            if (reponse === "existEmail") {
+                
                 messageEmail.textContent = "email existe déjà";
                 document.getElementById("email").addEventListener("click", function () {
                     messageEmail.textContent = "";
                 });
             }
             if (reponse === "valide") {
-                console.log("réussi");                
                 if (regexSpec.verifier() === true) { 
-                    console.log("caractère spécial ok");
                     if (regexChiffre.verifier() === true) { 
-                        console.log("chiffre ok");
                         if (mdpValue === verifMdpValue) { 
-                            console.log("mdp identique");
                             formInscription.submit();
                         } else {
                             messageVerifPass.textContent = "Les mots de passe ne sont pas identiques";
