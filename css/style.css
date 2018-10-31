@@ -551,7 +551,12 @@ body
     {
         margin-top: 10px;
     }
-     
+    
+    .valid-delete-comment
+    {
+        margin-top: 20px;
+    }
+    
     .news
     {
         margin-top: 20px;
