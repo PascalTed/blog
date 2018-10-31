@@ -332,6 +332,14 @@ body
    
 }
 
+#formulaireInscription form p:last-child
+{
+
+    margin-bottom: 18px;
+    
+   
+}
+
 #formulaireInscription input
 {
     font-size: 16px;
