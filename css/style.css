@@ -301,7 +301,7 @@ body
 #formulaireInscription div > p
 {
     max-width: 494px;
-    font-size: 20px;
+    font-size: 18px;
 
     margin-left: auto;
     margin-right: auto;
@@ -326,7 +326,7 @@ body
 {
 
   
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 40px;
     
    
@@ -351,7 +351,7 @@ body
     background-color: rgb(230, 230, 230);
     border: 1px solid rgb(51, 51, 51);
     border-radius: 4px;
-    font-size: 18px;
+
 }
 /* Fin formulaire inscription */
 
@@ -547,6 +547,17 @@ body
         margin-bottom: 20px;
     }
     
+        #formulaireInscription form p
+    {
+
+        margin-bottom: 0;
+    }
+    
+    #formulaireInscription div
+    {
+        margin-top: 20px;
+    }
+    
     .form-tiny-mce
     {
         margin-top: 10px;
@@ -576,6 +587,7 @@ body
         width: 80%;
     }
     
+
 
     .valid-delete-comment p:last-child
     {
