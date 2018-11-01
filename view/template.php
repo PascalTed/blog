@@ -25,7 +25,15 @@
         
         <div id="opaque-window"></div>
         
+        <!-- section -->
         <?= $content ?>
+        <!-- /section -->
+        
+        <footer>
+            <div>
+                <p>Copyright 2018 - Tous droits réservés</p>
+            </div>
+        </footer>
         
         <!-- début script -->
         <script src="js/tinymce/tinymce.js"></script>
