@@ -42,7 +42,7 @@
             <div class="all-comments">
                 <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong><em> le <?= $comment['comment_date_fr'] ?></em></p>
                 
-                <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+                <p>"<?= nl2br(htmlspecialchars($comment['comment'])) ?>"</p>
                 
                 <?php
                 if (isset($_SESSION['pseudo'])) { 
