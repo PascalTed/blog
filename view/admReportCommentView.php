@@ -37,7 +37,7 @@
     if ($countReportComment == 0) {
     ?>
         <div>
-            <p>Il n'y a pas de commentaires signalés</p>
+            <p>Il n'y a pas de commentaires signalés.</p>
         </div>
     
     <?php
