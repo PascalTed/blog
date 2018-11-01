@@ -553,7 +553,9 @@ body
     
     #menu li a:hover
     {
-        box-shadow: -5px 0px 0px 0px rgb(175, 206, 207);
+        box-shadow: inherit;
+        color: black;
+        background-color: rgb(151, 151, 151);
     }
     /* Fin menu */
     /* Fin header */
