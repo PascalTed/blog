@@ -32,7 +32,7 @@ class CommentManager extends Manager
     public function getReportComment()
     {
         $db = $this->dbConnect();
-        $comments = $db->query('SELECT comments.id, comments.comment, posts.title FROM comments INNER JOIN posts ON comments.post_id = posts.id AND moderation = 1');
+        $comments = $db->query('SELECT comments.id, comments.comment, comments.comment_date, posts.title FROM comments INNER JOIN posts ON comments.post_id = posts.id AND moderation = 1 ORDER BY comment_date DESC');
         return $comments;   
     }
     
