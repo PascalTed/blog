@@ -18,11 +18,11 @@
             <p>
                 <label for="textarea-titre">Ajouter le titre</label>
                 <textarea id="textarea-titre" name="textarea-titre"></textarea>
-                <span id="no-title"></span><br />
+                <span id="no-title"></span>
 
                 <label for="textarea-contenu">Ajouter le contenu</label>
                 <textarea id="textarea-contenu" name="textarea-contenu"></textarea>
-                <span id="no-content"></span><br />
+                <span id="no-content"></span>
                 
                 <input type="submit" value="Ajouter le billet" />
             </p>
