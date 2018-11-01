@@ -484,6 +484,11 @@ body
     color: white;
 }
 
+.all-comments > p:last-child
+{
+    margin-bottom: 5px;
+}
+
 .all-comments em
 {
     font-size: 15px;
