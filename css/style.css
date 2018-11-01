@@ -261,6 +261,15 @@ body
 }
 
 /* Formulaire "ajouter le billet" */
+.form-tiny-mce #no-title, .form-tiny-mce #no-content
+{
+    color: red;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Formulaire "ajouter le billet" */
 .form-tiny-mce input[value="Ajouter le billet"]
 {
     margin-top: 0;
@@ -352,6 +361,11 @@ body
     margin-top: 10px;
     border: 1px solid rgb(209, 209, 209);
     background-color: rgb(230, 230, 230);
+}
+
+#formulaireInscription form span
+{
+    color: red;
 }
 
 #formulaireInscription form p:last-child
