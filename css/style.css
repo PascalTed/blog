@@ -310,11 +310,18 @@ body
     display: flex;
     margin-bottom: 0;
     line-height: 30px;
+    font-weight: bold;
+}
+
+.valid-delete-comment p a:first-child
+{
+    color: green;
 }
 
 .valid-delete-comment p:last-child a + a
 {
     padding-left: 20px;
+    color: red;
 }
 /* Fin Commentaires signalés (partie administrateur) */
 
@@ -417,9 +424,11 @@ body
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .news-contenu p:last-child
 {
     margin-top: 10px;
+    font-weight: bold;
 }
 /* Fin contenu billet (titre et texte) */
 
@@ -456,6 +465,7 @@ body
 #form-add-comment input[type="submit"]
 {
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .all-comments
@@ -492,6 +502,7 @@ body
 .all-comments > p:last-child
 {
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .all-comments em
