@@ -21,9 +21,6 @@ class AccountManager extends Manager
         } elseif ($existingMail['email']) {
             echo "existEmail";
         } else{
-            $_SESSION['id'] = $existingUser['id'];
-            $_SESSION['admin'] = $existingUser['admin'];
-            $_SESSION['pseudo'] = $pseudo;           
             echo "valide";
         } 
     }
@@ -34,6 +31,10 @@ class AccountManager extends Manager
         $db = $this->dbConnect();
         $account = $db->prepare('INSERT INTO users (pseudo, pass, email) VALUES (?, ?, ?)');
         $account->execute(array($pseudo, $passHash, $mail));
+        
+        $_SESSION['id'] = $existingUser['id'];
+        $_SESSION['admin'] = $existingUser['admin'];
+        $_SESSION['pseudo'] = $pseudo; 
     }
     
     public function searchPseudoPass($pseudo, $pass) 
