@@ -502,6 +502,7 @@ background-color: rgb(175, 206, 207)
 .news-contenu #extrait
 {
     color: blue;
+    text-decoration: none;
 }
 /* Fin contenu billet (titre et texte) */
 
