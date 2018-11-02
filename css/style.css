@@ -519,7 +519,8 @@ background-color: rgb(175, 206, 207)
 
 .news-contenu #extrait:hover
 {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid rgb(0, 77, 0);
+    color: rgb(0, 77, 0);
 }
 /* Fin contenu billet (titre et texte) */
 
