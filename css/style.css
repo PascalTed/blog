@@ -532,6 +532,11 @@ background-color: rgb(175, 206, 207)
     color: white;
 }
 
+.all-comments > p:first-child strong
+{
+    padding-right: 10px;
+}
+
 .all-comments > p:last-child
 {
     margin-bottom: 5px;
