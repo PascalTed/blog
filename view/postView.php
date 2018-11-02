@@ -48,7 +48,7 @@
                 if (isset($_SESSION['pseudo'])) {
                     if ($comment['moderation'] == 1) {
                 ?>
-                        <p id="already-report">Déjà signalé</p>
+                        <p id="already-report">Commentaire signalé</p>
                 
                     <?php
                     } else {
