@@ -289,9 +289,8 @@ background-color: rgb(175, 206, 207)
     border: 1px solid rgb(51, 51, 51);
     margin-top: 40px;
     word-wrap: break-word;
-    border-top: 8px solid rgb(51, 51, 51);
     border-bottom: 8px solid rgb(51, 51, 51);
-    border-radius: 4px;;
+    border-radius: 4px;
 }
 
 .valid-delete-comment p
@@ -306,11 +305,13 @@ background-color: rgb(175, 206, 207)
     flex-wrap: wrap;
     align-items: center;
     margin-top: 0;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(51, 51, 51);
     font-size: 18px;
     height: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
+    color: white;
+    word-break: break-all;
 }
 
 .valid-delete-comment p:first-child strong
@@ -327,18 +328,43 @@ background-color: rgb(175, 206, 207)
 {
     display: flex;
     margin-bottom: 0;
-    line-height: 30px;
+    line-height: 20px;
+    font-size: 18px;
+        text-align: center;
 }
 
 .valid-delete-comment p a:first-child
 {
-    color: green;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.8);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 80px;
 }
 
 .valid-delete-comment p:last-child a + a
 {
-    padding-left: 20px;
-    color: red;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 80px;
+}
+
+.valid-delete-comment p a:first-child:hover
+{
+    background-color: rgb(0, 128, 0);
+    text-shadow: 1px 1px 2px black;
+}
+
+.valid-delete-comment p:last-child a + a:hover
+{
+    background-color: rgb(204, 0, 0);
+    text-shadow: 1px 1px 2px black;
 }
 /* Fin Commentaires signalés (partie administrateur) */
 
@@ -722,11 +748,6 @@ footer div p
         justify-content: space-between;
         line-height: inherit;
         padding-bottom: 5px;
-    }
-    
-    .valid-delete-comment p:last-child a
-    {
-        text-align: center;
     }
     /* Fin commentaires signalés (partie administrateur)*/
     

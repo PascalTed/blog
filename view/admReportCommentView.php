@@ -28,7 +28,7 @@
             </p>
             
             <p>
-                <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider le commentaire</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer le commentaire</a>    
+                <a href="index.php?action=admValidComment&amp;idComment=<?= $comment['id'] ?>">Valider</a><a href="index.php?action=admRemoveComment&amp;idComment=<?= $comment['id'] ?>">Supprimer</a>    
             </p>
         </div>
     
