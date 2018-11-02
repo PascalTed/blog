@@ -53,7 +53,7 @@
                     <?php
                     } else {
                     ?>
-                        <p id="to-report"><a href="index.php?action=reportComment&amp;idComment=<?= $comment['id']; ?>&amp;idPost=<?= $post['id']; ?> ">Signaler</a></p>
+                        <p><a  id="to-report" href="index.php?action=reportComment&amp;idComment=<?= $comment['id']; ?>&amp;idPost=<?= $post['id']; ?> ">Signaler</a></p>
                 
                 <?php
                     }
