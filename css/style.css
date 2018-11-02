@@ -582,6 +582,25 @@ background-color: rgb(175, 206, 207)
     margin-bottom: 5px;
 }
 
+.all-comments p #to-report
+{
+    display: block;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8);
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    width: 60px;
+}
+
+.all-comments p #to-report:hover
+{
+    background-color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 2px black;
+}
+
 .all-comments em
 {
     font-size: 14px;
