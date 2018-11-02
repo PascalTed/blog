@@ -302,10 +302,20 @@ background-color: rgb(175, 206, 207)
 
 .valid-delete-comment p:first-child
 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin-top: 0;
     background-color: rgb(230, 230, 230);
     font-size: 18px;
-    line-height: 30px;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.valid-delete-comment p:first-child strong
+{
+    padding-right: 10px;
 }
 
 .valid-delete-comment p:nth-child(2)
