@@ -1,19 +1,20 @@
 <?php
 
 // Chargement des classes
-require('model/PostManager.php');
-require('model/CommentManager.php');
-require('model/AccountManager.php');
+require_once('model/PostManager.php');
+require_once('model/CommentManager.php');
+require_once('model/AccountManager.php');
 
-
+// liste des billets
 function listPosts()
 {
     $postManager = new PostManager();
     $posts = $postManager->getPosts();
 
-    require('view/listPostsView.php');
+    require_once('view/listPostsView.php');
 }
 
+//billet + commentaires associés
 function post($postId)
 {
     $postManager = new PostManager();
@@ -22,7 +23,7 @@ function post($postId)
     $post = $postManager->getPost($postId);
     $comments = $commentManager->getComments($postId);
 
-    require('view/postView.php');
+    require_once('view/postView.php');
 }
 
 function reportComment($commentId, $postId)
