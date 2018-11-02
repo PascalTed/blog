@@ -525,6 +525,7 @@ background-color: rgb(175, 206, 207)
 .all-comments > p:first-child
 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 0;
     background-color: rgb(51, 51, 51);
