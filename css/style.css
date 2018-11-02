@@ -197,6 +197,7 @@ body
     color: black;
     text-decoration: none;
     background-color: rgb(230, 230, 230);
+    box-shadow: 0px 5px 5px rgb(51, 51, 51);
     padding: 5px;
     text-align: center;
 }
@@ -209,16 +210,6 @@ body
 .link-user a:hover, .link-adm a:hover
 {
    background-color: rgb(175, 206, 207); 
-}
-
-.link-adm a
-{
-    border-left: 1px solid rgb(51, 51, 51);
-}
-
-.link-adm a:first-child
-{
-    border-left: none;
 }
 
 /* Début formulaires Tinymce : Formulaire "ajouter le billet" et formulaire "modifier ou supprimer le billet" (partie administrateur) */
