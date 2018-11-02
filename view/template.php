@@ -4,9 +4,27 @@
     
     <head>
         <meta charset="utf-8" />
-        <title>Blog de Jean Forteroche</title>
-        <link href="css/style.css" rel="stylesheet" />
-        <link rel ="stylesheet" href="fontawesome/css/all.css">
+        <title>Blog de Jean Forteroche (acteur et écrivain)</title>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="fontawesome/css/all.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Jean Forteroche (acteur et écrivain) innove, suivez son nouveau roman &quot;Billet simple pour l'Alaska&quot; publié par épisode sur son blog">
+        
+        <!-- Facebook, Open Graph data -->
+		<meta property="og:title" content="Blog de Jean Forteroche (acteur et écrivain)">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://jf-blog.tedsev.com/">
+		<meta property="og:image" content="http://jf-blog.tedsev.com/images/jf-blog.png">
+		<meta property="og:description" content="Jean Forteroche (acteur et écrivain) innove, suivez son nouveau roman &quot;Billet simple pour l'Alaska&quot; publié par épisode sur son blog">
+        
+        <!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="http://jf-blog.tedsev.com/">
+		<meta name="twitter:title" content="Blog de Jean Forteroche (acteur et écrivain)">
+		<meta name="twitter:description" content="Jean Forteroche (acteur et écrivain) innove, suivez son nouveau roman &quot;Billet simple pour l'Alaska&quot; publié par épisode sur son blog">
+		<meta name="twitter:image" content="http://jf-blog.tedsev.com/images/jf-blog.png">
     </head>
     
     <body>
