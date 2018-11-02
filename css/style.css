@@ -483,9 +483,20 @@ background-color: rgb(175, 206, 207)
     margin-top: 10px;
 }
 
-.news-contenu .modif-supp
+.news-contenu .modif-supp a
 {
-    color: blue;
+    color: white;
+    background-color: rgba(0, 102, 255, 0.8);
+    padding: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.news-contenu .modif-supp a:hover
+{
+    background-color: rgb(0, 102, 255);
+    text-shadow: 1px 1px 2px black;
 }
 
 .news-contenu #extrait
