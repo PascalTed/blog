@@ -428,6 +428,7 @@ background-color: rgb(175, 206, 207)
     color: white;
     text-align: center;
     font-size: 20px;
+    word-wrap: break-word;
 }
 
 .news h2 em
@@ -445,6 +446,7 @@ background-color: rgb(175, 206, 207)
 {
     margin-top: 0;
     margin-bottom: 0;
+    word-wrap: break-word;
 }
 
 .news-contenu p:last-child
