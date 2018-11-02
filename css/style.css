@@ -466,6 +466,12 @@ body
     color: red;
 }
 
+#form-add-comment #connect-to-comment
+{
+    font-weight: bold;
+    color: blue;
+}
+
 #form-add-comment input[type="submit"]
 {
     margin-top: 5px;
