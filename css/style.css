@@ -254,6 +254,13 @@ body
 .form-tiny-mce #label-radio input
 {
     cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Formulaire "modifier ou supprimer le billet" */
+.form-tiny-mce #label-radio label
+{
+    cursor: pointer;
 }
 
 /* Formulaire "modifier ou supprimer le billet" */
