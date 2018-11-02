@@ -428,7 +428,11 @@ body
 .news-contenu p:last-child
 {
     margin-top: 10px;
-    font-weight: bold;
+}
+
+.news-contenu #extrait
+{
+    color: blue;
 }
 /* Fin contenu billet (titre et texte) */
 
