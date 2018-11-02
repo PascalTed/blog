@@ -45,12 +45,18 @@
                 <p>"<?= nl2br(htmlspecialchars($comment['comment'])) ?>"</p>
                 
                 <?php
-                if (isset($_SESSION['pseudo'])) { 
+                if (isset($_SESSION['pseudo'])) {
+                    if ($comment['moderation'] == 1) {
                 ?>
+                        <p id="already-report">Déjà signalé</p>
                 
-                    <p><a href="index.php?action=reportComment&amp;idComment=<?= $comment['id']; ?>&amp;idPost=<?= $post['id']; ?> ">Signaler</a></p>
+                    <?php
+                    } else {
+                    ?>
+                        <p><a href="index.php?action=reportComment&amp;idComment=<?= $comment['id']; ?>&amp;idPost=<?= $post['id']; ?> ">Signaler</a></p>
                 
                 <?php
+                    }
                 }
                 ?>
                 
