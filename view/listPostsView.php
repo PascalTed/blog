@@ -35,7 +35,7 @@
 
         <div class="news-contenu">
             <?= $postExtract; ?>
-            <a id="extrait" href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> <em><strong>... lire la suite</strong></em></a>
+            <a id="extrait" href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> <em>... lire la suite</em></a>
         </div>
     </div>
     
