@@ -503,6 +503,14 @@ background-color: rgb(175, 206, 207)
 {
     color: blue;
     text-decoration: none;
+    font-size: 17px;
+    border-bottom: 1px solid blue;
+}
+
+.news-contenu #extrait:hover
+{
+    border-bottom: 2px solid blue;
+    font-weight: bold;
 }
 /* Fin contenu billet (titre et texte) */
 
