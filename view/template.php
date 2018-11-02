@@ -42,7 +42,7 @@
             selector: '#textarea-titre', menubar: false, toolbar: 'undo redo | bold, italic | underline | strikethrough', branding: false, statusbar: false, forced_root_block: false, invalid_elements: 'div, br', entity_encoding : "raw"
         });
         tinymce.init({
-            selector: '#textarea-contenu', menubar: false, toolbar: 'undo redo | bold, italic | underline | strikethrough | alignleft, aligncenter, alignright, alignjustify', branding: false, statusbar: false, entity_encoding: "raw"
+            selector: '#textarea-contenu', menubar: false, toolbar: 'undo redo | bold, italic | underline | strikethrough | alignleft, aligncenter, alignright, alignjustify', branding: false, statusbar: false, entity_encoding: "raw", plugins: "autoresize"
         });
         </script>        
         <script src="js/ajaxpost.js"></script>
