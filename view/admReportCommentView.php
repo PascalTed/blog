@@ -19,7 +19,7 @@
     ?>    
         <div class="valid-delete-comment">
             <p>
-                <strong>Titre du billet : </strong><?= $comment['title'] ?>
+                <strong>Titre du billet : </strong><span><?= $comment['title'] ?></span>
             </p>
             
             <p>
