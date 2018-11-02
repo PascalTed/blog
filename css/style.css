@@ -460,6 +460,7 @@ body
 
 .all-comments
 {
+    background-color: rgb(230, 230, 230);
     margin-top: 25px;
     margin-bottom: 25px;
     max-width: 500px;
@@ -472,6 +473,11 @@ body
     padding-left: 10px;
     padding-right: 10px;
     word-wrap: break-word;
+}
+
+.all-comments #already-report
+{
+    color: red;
 }
 
 .all-comments > p:first-child
