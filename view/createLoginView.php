@@ -19,7 +19,7 @@
             
             <p>
                 <label for="pseudo">Pseudo*</label><br />
-                <input type="text" id="pseudo" name="pseudo" required /><span id="alertPseudo"></span>
+                <input type="text" id="pseudo" name="pseudo" required maxlength="20"/><span id="alertPseudo"></span>
             </p>
             
             <p>
