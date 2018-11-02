@@ -451,12 +451,12 @@ background-color: rgb(175, 206, 207)
     word-wrap: break-word;
 }
 
-.news-contenu p:last-child
+.news-contenu .modif-supp
 {
     margin-top: 10px;
 }
 
-.news-contenu p:last-child a
+.news-contenu .modif-supp
 {
     font-weight: bold;
     color: blue;
