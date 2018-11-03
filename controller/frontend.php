@@ -45,7 +45,7 @@ function displayCreateAccount()
 function verifPseudoMail($pseudo, $mail) {
 
     $accountManager = new AccountManager();
-    $accountManager->searchPseudoMailPass($pseudo, $mail);
+    $accountManager->searchPseudoMail($pseudo, $mail);
 }
 
 // Création du compte

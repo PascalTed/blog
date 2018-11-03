@@ -4,7 +4,7 @@ require_once("model/Manager.php");
 
 class AccountManager extends Manager
 {
-    public function searchPseudoMailPass($pseudo, $mail) 
+    public function searchPseudoMail($pseudo, $mail) 
     {
         $db = $this->dbConnect();
         
