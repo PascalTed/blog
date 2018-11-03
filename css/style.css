@@ -671,7 +671,7 @@ footer div p
 /* Fin body */
 
 /* Début media queries */
-/* Début media queries max-width: 1500px */
+/* Début media query max-width: 1500px */
 @media all and (max-width: 1500px){
     /* $content */
     .section-one, #formulaireInscription
@@ -680,9 +680,9 @@ footer div p
         padding-right: 10%;
     }
 }
-/* Fin media queries max-width: 1500px */
+/* Fin media query max-width: 1500px */
 
-/* Début media queries max-width: 850px */
+/* Début media query max-width: 850px */
 @media all and (max-width: 850px){
     
     /*  Début header  */
@@ -730,6 +730,11 @@ footer div p
     {
         border-left: inherit;
         border-top: 1px dashed white;
+    }
+    
+    menu li a
+    {
+        max-width: 140px;
     }
     
     #menu li a:hover
@@ -792,9 +797,9 @@ footer div p
         margin-bottom: 10px;
     }
 }
-/* Fin media queries max-width: 850px */
+/* Fin media query max-width: 850px */
 
-/* Début media queries max-width: 500px */
+/* Début media query max-width: 500px */
 @media all and (max-width: 500px){
     
     /* fenêtre se connecter */
@@ -819,4 +824,5 @@ footer div p
         width: 100%;
     }
 }
-/* Fin media queries max-width: 500px */
+/* Fin media query max-width: 500px */
+/* Fin media queries */
