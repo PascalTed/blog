@@ -159,11 +159,15 @@ formConnexion.addEventListener("submit", function(e) {
     
     ajaxPostConnect.init("index.php?action=connectAccount", dataSend, function(reponse) {
 
-        if (reponse === "noUser") {
+        if (reponse === "noUser" || reponse === "noPass") {
             document.getElementById("pseudo-pass-alert").textContent = "Pseudo ou mot de passe incorrect";
-        }    
-        if (reponse === "noPass") {
-            document.getElementById("pseudo-pass-alert").textContent = "Pseudo ou mot de passe incorrect";
+            
+            document.getElementById("pseudoConnect").addEventListener("click", function () {
+                document.getElementById("pseudo-pass-alert").textContent = "";
+            });
+            document.getElementById("passwordConnect").addEventListener("click", function () {
+                document.getElementById("pseudo-pass-alert").textContent = "";
+            });
         }
         if (reponse === "valid") {
             formConnexion.submit();
