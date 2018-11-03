@@ -13,17 +13,7 @@
     while ($data = $posts->fetch()) {
         // Récupérer extrait du billet
         $postExtract = $data['content'];
-        $postExtract = substr($postExtract, 0, 500);
-        $firstSpace = strrpos($postExtract, '<p');
-
-        if ($firstSpace == false) {
-            $firstSpace = strrpos($postExtract, ' ');
-            $postExtract = substr($postExtract, 0, $firstSpace);
-        } else {
-            $postExtract = substr($postExtract, 0, $firstSpace);
-            $firstSpace = strrpos($postExtract, ' ');
-            $postExtract = substr($postExtract, 0, $firstSpace);
-        }
+        $postExtract = substr($postExtract, 0, 600);
     ?>
     
     <!-- Affichage du billet --> 
@@ -34,7 +24,7 @@
         </h2>
 
         <div class="news-contenu">
-            <?= $postExtract; ?>
+            <?= strip_tags($postExtract); ?>
             <a id="extrait" href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> <em>... lire la suite</em></a>
         </div>
     </div>
