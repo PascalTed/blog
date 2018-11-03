@@ -675,7 +675,9 @@ background-color: rgb(175, 206, 207)
     border-radius: 4px;
     text-decoration: none;
     text-align: center;
-    width: 60px;
+    width: 70px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .all-comments p #to-report:hover
@@ -785,7 +787,7 @@ footer div p
     
     #menu li a
     {
-        min-width: 140px;
+        width: 160px;
     }
     
     #menu li a:hover
