@@ -5,7 +5,7 @@ require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 require_once('model/AccountManager.php');
 
-// liste des billets
+// Affiche la liste des billets
 function listPosts()
 {
     $postManager = new PostManager();
@@ -14,7 +14,7 @@ function listPosts()
     require_once('view/listPostsView.php');
 }
 
-//billet + commentaires associés
+// Affiche le billet + commentaires associés
 function post($postId)
 {
     $postManager = new PostManager();
@@ -26,6 +26,7 @@ function post($postId)
     require_once('view/postView.php');
 }
 
+// Signaler un commentaire
 function reportComment($commentId, $postId)
 {
     $commentManager = new CommentManager();
@@ -34,59 +35,70 @@ function reportComment($commentId, $postId)
     header('Location: index.php?action=post&idPost=' . $postId);
 }
 
+// Affiche création d'un compte
 function displayCreateAccount()
 {
-    require('view/createLoginView.php');
+    require_once('view/createLoginView.php');
 }
 
+// Vérification des informations saisies (pseudo et email), venant d'un ajaxpost, avant de créer un compte. 
 function verifPseudoMailPass($pseudo, $mail) {
 
     $accountManager = new AccountManager();
     $accountManager->searchPseudoMailPass($pseudo, $mail);
 }
 
+// Création du compte
 function createAccount($pseudo, $mail, $pass)
 {    
     $accountManager = new AccountManager();
     $accountManager->editAccount($pseudo, $mail, $pass);
+    
     header('Location: index.php');
 }
 
-
+// Vérification des informations saisies (pseudo et pass), venant d'un ajaxpost, avant de se connecter
 function verifPseudoPass($pseudo, $pass) 
 {
     $accountManager = new AccountManager();
     $accountManager->searchPseudoPass($pseudo, $pass);
 }
 
+// se déconnecter
 function  disconnectAccount()
 {
     
     $accountManager = new AccountManager();
     $accountManager->removeSession();
-    header('Location: index.php');
     
+    header('Location: index.php');
 }
 
+// Affiche la liste des billets à modifier, partie administrateur
 function admListPosts()
 {
     $postManager = new PostManager();
     $posts = $postManager->getPosts();
-    require('view/admListPostsView.php');
+    
+    require_once('view/admListPostsView.php');
 }
 
+// Affiche la page pour céer les nouveaux billets, partie administrateur
 function admCreatePost()
 {
-    require('view/admCreatePostView.php');
+    require_once('view/admCreatePostView.php');
 }
 
+// Enregistrement du nouveau billet, partie administrateur
 function admEditPost($postTitle, $postContents)
 {
     $PostManager = new PostManager();
     $PostManager->editPost($postTitle, $postContents);
+    
     header('Location: index.php?action=admListPosts');  
 }
 
+// Affiche la page pour modifier le billet, partie administrateur
 function admSeeModifyPost($postId)
 {
     $postManager = new PostManager();
@@ -95,15 +107,18 @@ function admSeeModifyPost($postId)
     require('view/admModifPostView.php');
 }
 
+// Modifier un poste, partie administrateur 
 function admModifyPost($postId, $textareaTitre, $textareaContenu)
 {
     
     $postManager = new PostManager();
     $postManager->modifyPost($postId, $textareaTitre, $textareaContenu);
     $posts = $postManager->getPosts();
-    require('view/admListPostsView.php');
+    
+    require_once('view/admListPostsView.php');
 }
 
+// Supprimer un poste avec les commentaires, partie administrateur 
 function admRemovePostComments($postId) 
 {
     $postManager = new PostManager();
@@ -113,34 +128,40 @@ function admRemovePostComments($postId)
     $commentManager->removeCommentsByPost($postId);
     
     $posts = $postManager->getPosts();
-    require('view/admListPostsView.php');    
+    
+    require_once('view/admListPostsView.php');    
 }
 
-
+// Affiche la page des commentaires signalés, partie administrateur
 function admReportComment()
 {
     $commentManager = new CommentManager();
     $comments = $commentManager->getReportComment();
-    require('view/admReportCommentView.php');
+    
+    require_once('view/admReportCommentView.php');
 }
 
+// Valider le commentaire signalé
 function admValidComment($commentId)
 {
     $commentManager = new CommentManager();
     $commentManager->validComment($commentId);
     $comments = $commentManager->getReportComment();
-    require('view/admReportCommentView.php');
+    
+    require_once('view/admReportCommentView.php');
 }
 
+// Supprimer le commentaire signalé
 function admRemoveComment($commentId)
 {
     $commentManager = new CommentManager();
     $commentManager->removeComment($commentId);
     $comments = $commentManager->getReportComment();
-    require('view/admReportCommentView.php');
+    
+    require_once('view/admReportCommentView.php');
 }
 
-
+// Ajouter un commentaire
 function addComment($userId, $postId, $comment)
 {
     $commentManager = new CommentManager();
