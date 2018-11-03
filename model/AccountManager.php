@@ -34,9 +34,13 @@ class AccountManager extends Manager
         $account = $db->prepare('INSERT INTO users (pseudo, pass, email) VALUES (?, ?, ?)');
         $account->execute(array($pseudo, $passHash, $mail));
         
-        $_SESSION['id'] = $existingUser['id'];
-        $_SESSION['admin'] = $existingUser['admin'];
-        $_SESSION['pseudo'] = $pseudo; 
+        $sessionAccount = $db->prepare('SELECT id, admin, pseudo FROM users WHERE pseudo = ?');
+        $sessionAccount->execute(array($pseudo));
+        $infosSession = $sessionAccount->fetch();
+        
+        $_SESSION['id'] = $infosSession['id'];
+        $_SESSION['admin'] = $infosSession['admin'];
+        $_SESSION['pseudo'] = $infosSession['pseudo'];
     }
     
     // Vérification des informations saisies (pseudo et pass), venant d'un ajaxpost, avant de se connecter
