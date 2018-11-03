@@ -25,7 +25,7 @@
 
         <div class="news-contenu">
             <?= strip_tags($postExtract); ?>
-            <a id="extrait" href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> <em>... lire la suite</em></a>
+            <a class="extrait" href="index.php?action=post&amp;idPost=<?= $data['id']; ?>"> <em>... lire la suite</em></a>
         </div>
     </div>
     
