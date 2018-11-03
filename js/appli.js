@@ -93,7 +93,7 @@ if (formInscription !== null) {
         var regexChiffre = Object.create(Regex);
         regexChiffre.init(/\d+/, mdpValue);
         
-        var dataSend = 'pseudo='+ userCreate + '&email=' + encodeURIComponent(emailCreate);
+        var dataSend = 'pseudo='+ encodeURIComponent(userCreate) + '&email=' + encodeURIComponent(emailCreate);
         var ajaxPostCreate = Object.create(AjaxPost);
         
         ajaxPostCreate.init("index.php?action=verifCreateAccount", dataSend, function(reponse) {
@@ -153,7 +153,7 @@ formConnexion.addEventListener("submit", function(e) {
     
     var User = document.getElementById('pseudoConnect').value;
     var Pass = document.getElementById('passwordConnect').value;
-    var dataSend = 'pseudoConnect='+ User + '&passwordConnect=' + encodeURIComponent(Pass);
+    var dataSend = 'pseudoConnect='+ encodeURIComponent(User) + '&passwordConnect=' + encodeURIComponent(Pass);
     
     var ajaxPostConnect = Object.create(AjaxPost);
     
