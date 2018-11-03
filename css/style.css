@@ -540,7 +540,7 @@ background-color: rgb(175, 206, 207)
     text-shadow: 1px 1px 2px black;
 }
 
-.news-contenu #extrait
+.news-contenu .extrait
 {
     color: blue;
     text-decoration: none;
@@ -548,7 +548,7 @@ background-color: rgb(175, 206, 207)
     border-bottom: 1px solid blue;
 }
 
-.news-contenu #extrait:hover
+.news-contenu .extrait:hover
 {
     border-bottom: 2px solid rgb(0, 77, 0);
     color: rgb(0, 77, 0);
