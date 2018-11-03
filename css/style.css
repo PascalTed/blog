@@ -90,7 +90,7 @@ body
     color: white;
     padding-left: 7px;
     padding-right: 7px;
-    max-width: 110px;
+    min-width: 110px;
     height: 50px;
     font-size: 18px;
     -webkit-box-sizing: border-box;
@@ -785,7 +785,7 @@ footer div p
     
     #menu li a
     {
-        max-width: 140px;
+        min-width: 140px;
     }
     
     #menu li a:hover
