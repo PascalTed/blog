@@ -474,6 +474,7 @@ background-color: rgb(175, 206, 207)
 {
     background-color: rgb(230, 230, 230);
     padding: 10px;
+    word-wrap: break-word;
 }
 
 .news-contenu p
