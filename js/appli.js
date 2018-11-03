@@ -107,7 +107,7 @@ if (formInscription !== null) {
             }
             if (reponse === "existEmail") {
                 
-                messageEmail.textContent = "email existe déjà";
+                messageEmail.textContent = "email déjà existant";
                 document.getElementById("email").addEventListener("click", function () {
                     messageEmail.textContent = "";
                 });
