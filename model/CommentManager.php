@@ -4,6 +4,7 @@ require_once("model/Manager.php");
 
 class CommentManager extends Manager
 {
+    // Obtenir les commentaires
     public function getComments($postId)
     {
         $db = $this->dbConnect();
@@ -13,6 +14,7 @@ class CommentManager extends Manager
         return $comments;
     }
     
+    // Reporter le commentaire
     public function editReport($commentId)
     {
         $db = $this->dbConnect();
@@ -20,6 +22,7 @@ class CommentManager extends Manager
         $comments->execute(array($commentId));
     }
     
+    // Enregistrer le commentaire
     public function postComment($userId, $postId, $comment)
     {
         $db = $this->dbConnect();

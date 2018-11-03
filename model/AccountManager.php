@@ -4,6 +4,7 @@ require_once("model/Manager.php");
 
 class AccountManager extends Manager
 {
+    // Vérification des informations saisies (pseudo et email), venant d'un ajaxpost, avant de créer un compte.
     public function searchPseudoMail($pseudo, $mail) 
     {
         $db = $this->dbConnect();
@@ -25,6 +26,7 @@ class AccountManager extends Manager
         } 
     }
     
+    // Création du compte
     public function editAccount($pseudo, $mail, $pass)
     {
         $passHash = password_hash($pass, PASSWORD_DEFAULT);
@@ -37,6 +39,7 @@ class AccountManager extends Manager
         $_SESSION['pseudo'] = $pseudo; 
     }
     
+    // Vérification des informations saisies (pseudo et pass), venant d'un ajaxpost, avant de se connecter
     public function searchPseudoPass($pseudo, $pass) 
     {
         $db = $this->dbConnect();
@@ -59,6 +62,7 @@ class AccountManager extends Manager
         } 
     }
     
+    // Se déconnecter
     public function removeSession()
     {
         // Suppression des variables de session et de la session
