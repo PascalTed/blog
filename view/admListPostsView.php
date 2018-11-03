@@ -18,17 +18,7 @@
     {
         // Récupérer extrait du billet
         $postExtract = $data['content'];
-        $postExtract = substr($postExtract, 0, 500);
-        $firstSpace = strrpos($postExtract, '<p');
-
-        if ($firstSpace == false) {
-            $firstSpace = strrpos($postExtract, ' ');
-            $postExtract = substr($postExtract, 0, $firstSpace);
-        } else {
-            $postExtract = substr($postExtract, 0, $firstSpace);
-            $firstSpace = strrpos($postExtract, ' ');
-            $postExtract = substr($postExtract, 0, $firstSpace);
-        }
+        $postExtract = substr($postExtract, 0, 600);
     ?>
     <!-- Affichage du billet -->
     <div class="news">
@@ -38,7 +28,7 @@
         </h2>
         
         <div class="news-contenu">
-            <?= $postExtract; ?> ...
+            <?= strip_tags($postExtract); ?> ...
             <p class="modif-supp">
                 <a href="index.php?action=admSeeModifyPost&amp;idPost=<?= $data['id']; ?>">Modifier ou supprimer</a>
             </p>
