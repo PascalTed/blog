@@ -90,7 +90,7 @@ try {
         // Modifier ou supprimer un poste, partie administrateur    
         } elseif ($_GET['action'] == 'admModifyOrRemovePost') {
             if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
-                if (isset($_POST['setPost']) && $_POST['setPost'] == "modifyPost") {
+                if (isset($_POST['setPost']) && $_POST['setPost'] == "admModifyPost") {
                     admModifyPost($_GET['idPost'], $_POST['textarea-titre'], $_POST['textarea-contenu']);
                 }
                 if (isset($_POST['setPost']) && $_POST['setPost'] == "admRemovePostComments") {
