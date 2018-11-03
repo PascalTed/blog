@@ -39,7 +39,7 @@ try {
             
         // Vérification des informations saisies (pseudo et email), venant d'un ajaxpost, avant de créer un compte.   
         } elseif ($_GET['action'] == 'verifCreateAccount') {
-            verifPseudoMailPass($_POST['pseudo'], $_POST['email']);    
+            verifPseudoMail($_POST['pseudo'], $_POST['email']);    
         
         // Enregistrement du nouveau compte
         } elseif ($_GET['action'] == 'createAccount') {

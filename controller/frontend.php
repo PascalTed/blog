@@ -42,7 +42,7 @@ function displayCreateAccount()
 }
 
 // Vérification des informations saisies (pseudo et email), venant d'un ajaxpost, avant de créer un compte. 
-function verifPseudoMailPass($pseudo, $mail) {
+function verifPseudoMail($pseudo, $mail) {
 
     $accountManager = new AccountManager();
     $accountManager->searchPseudoMailPass($pseudo, $mail);
