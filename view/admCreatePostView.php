@@ -1,7 +1,7 @@
 <?php require('menuView.php'); ?>
 <?php require('loginView.php'); ?>
 
-<?php $titleHeader = 'Administration du Blog de Jean Forteroche' ?>
+<?php $titleHeader = 'Administration du Blog' ?>
 
 <?php ob_start(); ?>
 
