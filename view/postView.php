@@ -9,9 +9,9 @@
 
 <section class="section-one">
 
-    <h1>Lecture du billet</h1>
+    <h1>Lecture et commentaires de l'épisode</h1>
     <div class="link-user">
-        <p><a href="index.php">&lsaquo;&lsaquo; Retour à la liste des billets</a></p>
+        <p><a href="index.php">&lsaquo;&lsaquo; Tous les épisodes</a></p>
     </div>
 
     <div class="news">
