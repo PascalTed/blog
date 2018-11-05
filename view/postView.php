@@ -43,7 +43,7 @@
                 <!-- Affichage de chaque message (toutes les données sont protégées par htmlspecialchars -->
                 <p><strong><?= htmlspecialchars($comment['pseudo']) ?></strong><em> le <?= $comment['comment_date_fr'] ?></em></p>
                 
-                <p>"<?= nl2br(htmlspecialchars($comment['comment'])) ?>"</p>
+                <p>"<?= htmlspecialchars($comment['comment']) ?>"</p>
                 
                 <?php
                 if (isset($_SESSION['pseudo'])) {
