@@ -10,7 +10,7 @@
     <h1>Inscription</h1>
     
     <div class="link-user">
-        <p><a href="index.php">&lsaquo;&lsaquo; Retour à la liste des billets</a></p>
+        <p><a href="index.php">&lsaquo;&lsaquo; Tous les épisodes</a></p>
     </div>
            
     <div>
