@@ -119,7 +119,7 @@ body
 #seConnecter
 {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     background-color: white;
     color: black;
