@@ -7,7 +7,7 @@
 
 <section class="section-one">
     
-    <h1>Billets du blog</h1>
+    <h1>"Billet simple pour l'Alaska"</h1>
     
     <?php
     while ($data = $posts->fetch()) {
