@@ -25,7 +25,7 @@
             <p>
                 <!-- Affichage de chaque message (toutes les données sont protégées par htmlspecialchars) -->
                 <strong>Commentaire signalé : </strong><br />
-                "<?= htmlspecialchars($comment['comment']); ?>"
+                "<?= nl2br(htmlspecialchars($comment['comment'])); ?>"
             </p>
             
             <p>
