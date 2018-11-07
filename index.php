@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php
-require('controller/frontend.php');
+require('controller/controller.php');
 
 try {
     if (isset($_GET['action'])) {
