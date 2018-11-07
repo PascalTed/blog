@@ -500,7 +500,7 @@ background-color: rgb(175, 206, 207)
     word-wrap: break-word;
 }
 
-.news h2 em
+.news h2 #date
 {
     font-size: 14px;
 }
