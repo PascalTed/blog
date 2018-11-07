@@ -16,7 +16,7 @@
 
     <div class="news">
         <h2>
-            <em>le <?= $post['creation_date_fr'] ?></em><br />
+            <em id="date">le <?= $post['creation_date_fr'] ?></em><br />
             <?= $post['title'] ?>
         </h2>
     
