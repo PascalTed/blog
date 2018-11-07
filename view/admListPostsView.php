@@ -23,7 +23,7 @@
     <!-- Affichage du billet -->
     <div class="news">
         <h2>
-            <em>le <?= $data['creation_date_fr']; ?></em><br />
+            <em id="date">le <?= $data['creation_date_fr']; ?></em><br />
             <?= $data['title']; ?>
         </h2>
         
